@@ -2,10 +2,10 @@
 <style>
   .dragme {
     position: fixed;
-    top: 0;
+    top: 40vh;
     left:0;
     right: 0;
-    bottom: 0;
+    bottom: 40vh;
     background-color: rgba(255, 255, 50, 0.05);
   }
 </style>
@@ -22,6 +22,7 @@ function initDrag(){
   var differenceX =0;
   var nextPosition =0;
   var prevPosition =0;
+  var offcet=0;
   // CLICK
   $(".dragme").mousedown(function(e) {
     isDrag = true;
@@ -30,15 +31,22 @@ function initDrag(){
   // DRAG
   $(".dragme").mousemove(function(e) {
     if (isDrag) {
+      // calculate the dragged distance
       differenceX = e.pageX - originX;
+      // get current positions
       nextPosition = parseInt($(".next").css("left"), 10);
       prevPosition = parseInt($(".prev").css("right"), 10);
+      // calculate new positions
       newnextPosition = nextPosition + differenceX;
       newprevPosition = prevPosition - differenceX;
-      console.log(newnextPosition);
+      // change position
       $(".prev").css("right",newprevPosition +"px");
       $(".next").css("left", newnextPosition +"px");
-      console.log($(".next").css("left"));
+
+      // update the offcet for records
+      offcet -= differenceX/100;
+      console.log(offcet.toPrecision(2));
+      // equalise the difference
       originX = e.pageX;
     }
   });

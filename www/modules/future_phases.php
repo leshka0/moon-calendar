@@ -25,8 +25,8 @@ function loadNexDates(configMoon){
 		nextDay.setDate(nextDay.getDate() + 1);
 		$(".next").append("<div class='date'>" +nextDay.getDate()+ "</div>");
 		$(".prev").append("<div class='date'>" +nextDay.getDate()+ "</div>");
-		$(".next").css("left",-range*100 + "px");
-		$(".prev").css("right",-range*100 + "px");
+		$(".next").css("left",-range*100 + 50 + "px");
+		$(".prev").css("right",-range*100 + 50 + "px");
 	}
 }
 //past
