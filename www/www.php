@@ -83,6 +83,8 @@
 		<script type="text/javascript" src="modules/currentmoon.js"></script>
 		<!-- future dates -->
 		<?php include("modules/future_phases.php"); ?>
+		<!-- drag and drop -->
+		<?php include("modules/draganddrop.php"); ?>
 
 	</body>
 </html>
