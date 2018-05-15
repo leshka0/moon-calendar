@@ -11,25 +11,30 @@
 
 var moon
 var currentDay = new Date(new Date());
-var nextDay = new Date(currentDay);
-var prevDay = new Date(currentDay);
+var range = 40;
+var startingDay = new Date(new Date());
+startingDay.setDate(currentDay.getDate() - range);
+var nextDay = new Date(startingDay);
+var prevDay = new Date(startingDay);
+console.log(currentDay);
+console.log(startingDay);
 
+// future
 function loadNexDates(configMoon){
-	console.log(configMoon);
-	for (var i = 0; i < 20; i++) {
+	for (var i = -range; i < range-1; i++) {
 		nextDay.setDate(nextDay.getDate() + 1);
-		console.log(nextDay.getDate());
 		$(".next").append("<div class='date'>" +nextDay.getDate()+ "</div>");
+		$(".prev").append("<div class='date'>" +nextDay.getDate()+ "</div>");
+		$(".next").css("left",-range*100 + "px");
+		$(".prev").css("right",-range*100 + "px");
 	}
 }
-
+//past
 function loadPrevDates(configMoon){
-	console.log(configMoon);
-	for (var i = 0; i < 20; i++) {
-		prevDay.setDate(prevDay.getDate() - 1);
-		console.log(prevDay.getDate());
-		$(".prev").append("<div class='date'>" +prevDay.getDate()+ "</div>");
-	}
+// 	for (var i = 0; i < range; i++) {
+// 		prevDay.setDate(prevDay.getDate() - 1);
+// 		$(".prev").append("<div class='date'>" +prevDay.getDate()+ "</div>");
+// 	}
 }
 
 </script>
