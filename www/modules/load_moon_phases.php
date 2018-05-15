@@ -1,6 +1,6 @@
 <div id="ex1">1</div>
-<div id="ex2">2</div>
-<div id="ex3">3</div>
+<!-- <div id="ex2">2</div> -->
+<!-- <div id="ex3">3</div> -->
 
 
 <script type="text/javascript">
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		lang  		:'en', // 'ca' 'de' 'en' 'es' 'fr' 'it' 'pl' 'pt' 'ru' 'zh' (*)
 		month 		:new Date().getMonth() + 1, // 1  - 12
 		year  		:new Date().getFullYear(),
-		size		:50, //pixels
+		size		  :50, //pixels
 		lightColor	:"#888", //CSS color
 		shadeColor	:"#333", //CSS color
 		sizeQuarter	:20, //pixels
@@ -36,6 +36,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	configMoon.LDZ=new Date(configMoon.year,configMoon.month-1,1)/1000
 	load_moon_phases(configMoon)
+	loadNexDates(configMoon)
+	loadPrevDates(configMoon)
 })
 
 </script>
