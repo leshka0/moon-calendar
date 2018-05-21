@@ -4,7 +4,7 @@
 		<title>three.js webgl - geometry - cube</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-
+		<script src="build/jquery-3.3.1.min.js"></script>
 		<style>
 			body {
 				margin: 0px;
@@ -17,54 +17,6 @@
 				top: 200px;
 				left: 200px;
 			}
-			.prev{
-				font-family: sans-serif;
-				/* background-color: blue; */
-				color: white;
-				position: absolute;
-				text-align: right;
-				/* direction: rtl; */
-			}
-			.next{
-				font-family: sans-serif;
-				position: absolute;
-				/* background-color: red; */
-				color: white;
-				text-align: left;
-				/* direction: ltr; */
-			}
-			.prevContainer{
-				position: absolute;
-				top: 46vh;
-				right: 65vw;
-				left: -500px;
-				height: 75px;
-				overflow: scroll;
-				white-space: nowrap ;
-				overflow: hidden;
-			}
-			.nextContainer{
-				position: absolute;
-				top: 46vh;
-				left: 65vw;
-				right: -500px;
-				height: 75px;
-				white-space: nowrap ;
-				overflow: hidden;
-			}
-			.date{
-				text-align: center;
-				color: white;
-	      display: inline-block;
-	    	width: 100px;
-				height: 25px;
-				margin: 0px;
-				/* background-color: rgba(130,130,130,.05); */
-				font-size: 10px;
-				letter-spacing: 4px;
-				border-bottom: 25px solid grey;
-				border-image: url("img/ruler2x.png") 100 0 round;
-			}
 		</style>
 	</head>
 	<body>
@@ -75,6 +27,9 @@
 
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+		<!-- TweenLite -->
+		<script type="text/javascript" src="build/greensock/TweenLite.min.js"></script>
+		<script type="text/javascript" src="build/greensock/plugins/CSSPlugin.min.js"></script>
 		<!-- WEBGL -->
 		<?php include("modules/load_moon_phases.php"); ?>
 		<!-- WEBGL -->
