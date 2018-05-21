@@ -6,6 +6,8 @@
 <script type="text/javascript">
 
 var moon
+var configMoon
+var monthIndex = new Date().getMonth() + 1
 
 function load_moon_phases(obj){
 	var gets=[]
@@ -23,10 +25,11 @@ function load_moon_phases(obj){
 	xmlhttp.open("GET", url, true)
 	xmlhttp.send()
 }
-document.addEventListener("DOMContentLoaded", function() {
-	var configMoon = {
+
+	function configAMoon(monthIndex){
+	configMoon = {
 		lang  		:'en', // 'ca' 'de' 'en' 'es' 'fr' 'it' 'pl' 'pt' 'ru' 'zh' (*)
-		month 		:new Date().getMonth() + 1, // 1  - 12
+		month 		:monthIndex, // 1  - 12
 		year  		:new Date().getFullYear(),
 		size		  :50, //pixels
 		lightColor	:"#888", //CSS color
@@ -35,9 +38,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		texturize	:false //true - false
 	}
 	configMoon.LDZ=new Date(configMoon.year,configMoon.month-1,1)/1000
-	load_moon_phases(configMoon)
-	loadNexDates(configMoon)
-	loadPrevDates(configMoon)
-})
 
+	// load_moon_phases(configMoon)
+	// loadNexDates(configMoon)
+	// loadPrevDates(configMoon)
+
+}
+document.addEventListener("DOMContentLoaded", configAMoon(new Date().getMonth()+1),
+load_moon_phases(configMoon),
+loadNexDates(configMoon),
+loadPrevDates(configMoon),
+)
 </script>

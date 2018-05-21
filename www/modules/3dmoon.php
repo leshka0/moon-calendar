@@ -64,7 +64,7 @@
 
 
 				//LIGHT
-				directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
+				directionalLight = new THREE.DirectionalLight( 0xffffff, 1.0 );
 				directionalLight.position.set(-50*32,0,0);
 				directionalLight.castShadow = true;
 				directionalLight.shadowDarkness = 0.5;

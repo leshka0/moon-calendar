@@ -30,16 +30,17 @@
 		<!-- TweenLite -->
 		<script type="text/javascript" src="build/greensock/TweenLite.min.js"></script>
 		<script type="text/javascript" src="build/greensock/plugins/CSSPlugin.min.js"></script>
-		<!-- WEBGL -->
-		<?php include("modules/load_moon_phases.php"); ?>
+
 		<!-- WEBGL -->
 		<?php include("modules/3dmoon.php"); ?>
 		<!-- current state -->
 		<script type="text/javascript" src="modules/currentmoon.js"></script>
-		<!-- future dates -->
+		<!-- future dates on the ruller-->
 		<?php include("modules/future_phases.php"); ?>
 		<!-- drag and drop -->
 		<?php include("modules/draganddrop.php"); ?>
+		<!-- WEBGL -->
+		<?php include("modules/load_moon_phases.php"); ?>
 
 	</body>
 </html>

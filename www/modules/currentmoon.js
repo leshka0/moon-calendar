@@ -9,7 +9,6 @@ function map_range(value, low1, high1, low2, high2) {
 }
 // include in the webgl
 function light3dchange() {
-  console.log(moon.phase[day].phaseName);
   if (
     moon.phase[day].phaseName == "Waxing" ||
     moon.phase[day].phaseName == "First quarter" ||
@@ -62,6 +61,7 @@ function light3dchange() {
     animation = false;
   }
 }
+
 //tween the light value
 function tweenTheLight(lightRotTween) {
   var counter = { var: lightRot };
@@ -81,6 +81,7 @@ function tweenNotTheLight(lightRotTween) {
 }
 
 function text() {
+  // console.log(moon.phase[day]);
   // day = new Date().getDate()
   dayWeek = moon.phase[day].dayWeek;
   var html = "<div class='moon'>";
