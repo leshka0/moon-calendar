@@ -33,9 +33,12 @@ function initDrag(){
   var currentPosition =0;
   var offcet=0;
   var currentDateOffcet =0
+  var currentMonthOffcet =0
   var calculDate =0
   var calculMonth =1
   var originCurrentPosition = -(range-1)*20;
+  var originMonthPosition = -(rangeMonth-1)*20;
+  var month = new Date().getMonth()+1;
 
   // CLICK
   $(".dragme").mousedown(function(e) {
@@ -83,50 +86,36 @@ function initDrag(){
         // update the var DAY
         var today = new Date();
         calculDate = new Date(today.setDate(today.getDate() + currentDateOffcet));
-        console.log("DATE : " + calculDate);
+        // console.log("DATE : " + calculDate);
 
         var newDay = calculDate.getDate();
         var newMonth = calculDate.getMonth()+1;
-        // console.log("DATE : "+newDay);
-        // console.log("MONTH : "+newMonth);
 
-        load_moon_phases(configMoon);
-        configAMoon(newMonth);
+        // ONLY IF MONTH IS DIFFERENT
+        if (month != newMonth) {
+          // change date top
+          if (month<newMonth){
+            currentMonthOffcet += 1;
+          }
+          else {
+              currentMonthOffcet -= 1;
+          }
+          newMonthPosition = originMonthPosition - ((currentMonthOffcet)*20);
+          $(".month").css("margin-top", newMonthPosition +"px");
+
+          // update the visual
+          configAMoon(newMonth);
+          load_moon_phases(configMoon);
+          console.log("NEW MONTH : "+newMonth);
+        }
+
         day = newDay;
-        // console.log("CALC DAY : "+day);
-        // if (day>30){
-          // calculDate = 1;
-          // monthIndex += 1;
-          // configAMoon(monthIndex);
-          // day = new Date().getDate() + calculDate;
-            // monthIndex+=1;
-
-        // }
-        // console.log(day);
-
-
-
-        // if (day>moon.daysMonth){
-        //   day = 0;
-        //   moon.month+=1;
-        // var  date = new Date();
-        // console.log(date);
-        // date = date.setDate(date.getDate() - 1);
-        // console.log(date);
-        // console.log(moon.phase[day].lighting);
-        // day = date;
-        // }
-
-        // console.log(moon.daysMonth);
-        // if (moon.phase[day].dayMonth =="30" ){
-        //   // load_moon_phases(configMoon)
-        //   console.log("CHANGE DATE");
-        // }
+        month = newMonth;
 
         light3dchange();
         text();
       }
-      // change position
+      // change position timeline
       $(".prev").css("right",newprevPosition +"px");
       $(".next").css("left", newnextPosition +"px");
 
@@ -136,7 +125,7 @@ function initDrag(){
   });
   // RELEASE
   $(".dragme").mouseup(function(e) {
-    console.log( "MOUSE UP" );
+    // console.log( "MOUSE UP" );
     isDrag = false;
     $(".dragme").removeClass("dropme");
   });

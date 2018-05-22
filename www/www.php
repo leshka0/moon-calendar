@@ -22,8 +22,8 @@
 	<body>
 
 		<!-- JUST FOR DEBUG -->
-		<script type="text/javascript" src="build/dat.gui.js"></script>
-		<script type="text/javascript" src="modules/gui.js"></script>
+		<!-- <script type="text/javascript" src="build/dat.gui.js"></script>
+		<script type="text/javascript" src="modules/gui.js"></script> -->
 
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>

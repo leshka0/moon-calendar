@@ -62,10 +62,21 @@
 		height: 15px;
 		/* background-color: blue; */
 	}
+	.monthContainer{
+		overflow: hidden;
+		height: 15px;
+		/* background-color: blue; */
+	}
 	.current{
 		/* background-color: red; */
 		transition: all .2s ease;
 		width: 20px;
+		height: 10px;
+	}
+	.month{
+		/* background-color: red; */
+		transition: all .2s ease;
+		width: 27px;
 		height: 10px;
 	}
 	.currentDateNumbr{
@@ -77,6 +88,16 @@
 		margin: 0px;
 		/* background-color: rgba(130,130,130,.05); */
 		font-size: 10px;
+	}
+	.monthNumbr{
+			text-align: left;
+			color: white;
+			display: inline-block;
+			width: 27px;
+			height: 20px;
+			margin: 0px;
+			background-color: rgba(130,130,130,.05);
+			font-size: 10px;
 	}
 </style>
 
@@ -94,7 +115,12 @@
 			<div class="current">
 			</div>
 		</div>
-	  &nbsp;May 2018
+		&nbsp;
+		<div class="monthContainer">
+			<div class="month">
+			</div>
+		</div>
+		&nbsp;2018
 	</div>
 </div>
 
@@ -102,32 +128,79 @@
 
 var moon
 var currentDay = new Date(new Date());
-var range = 100;
+var range = 200;
+var rangeMonth = 20;
 var startingDay = new Date(new Date());
+var startingMonth = new Date(new Date());
 startingDay.setDate(currentDay.getDate() - range);
+startingMonth.setMonth(currentDay.getMonth() - rangeMonth);
 var nextDay = new Date(startingDay);
 var prevDay = new Date(startingDay);
-console.log(currentDay);
-console.log(startingDay);
+var nextMonth = new Date(startingMonth);
+// console.log("CURRENT : "+currentDay);
+// console.log("STARTING DAY : "+startingDay);
+console.log("STARTING MONTH : "+nextMonth);
 
-// future
+function monthNames(x){
+	switch (x) {
+    case 1:
+        return "Jan";
+        break;
+    case 2:
+        return "Feb";
+        break;
+    case 3:
+        return "Mar";
+        break;
+    case 4:
+        return "Avr";
+        break;
+    case 5:
+        return "May";
+				break;
+    case 6:
+        return "Jun";
+				break;
+    case 7:
+        return "Jul";
+				break;
+    case 8:
+        return "Aug";
+				break;
+    case 9:
+        return "Sep";
+				break;
+    case 10:
+        return "Oct";
+				break;
+    case 11:
+        return "Nov";
+				break;
+    case 12:
+        return "Dec";
+				break;
+		default:
+		    return "Month";
+			}
+}
+
+// load dates timeline
 function loadNexDates(configMoon){
 	for (var i = -range; i < range-1; i++) {
 		nextDay.setDate(nextDay.getDate() + 1);
 		$(".next").append("<div class='date'>" +nextDay.getDate()+ "</div>");
 		$(".prev").append("<div class='date'>" +nextDay.getDate()+ "</div>");
 		$(".current").append("<div class='currentDateNumbr'>" +nextDay.getDate()+ "</div>");
-		$(".next").css("left",-range*100 + 50 + "px");
-		$(".prev").css("right",-range*100 + 50 + "px");
-		$(".current").css("margin-top",-(range-1)*20 + "px");
 	}
-}
-//past
-function loadPrevDates(configMoon){
-// 	for (var i = 0; i < range; i++) {
-// 		prevDay.setDate(prevDay.getDate() - 1);
-// 		$(".prev").append("<div class='date'>" +prevDay.getDate()+ "</div>");
-// 	}
+	for (var i = -rangeMonth; i < rangeMonth - 1; i++) {
+		nextMonth.setMonth( nextMonth.getMonth( ) + 1 );
+		$(".month").append("<div class='monthNumbr'>" + monthNames(nextMonth.getMonth()+1) + "</div>");
+	}
+
+	$(".next").css("left",-range*100 + 50 + "px");
+	$(".prev").css("right",-range*100 + 50 + "px");
+	$(".current").css("margin-top",-(range-1)*20 + "px");
+	$(".month").css("margin-top",-(rangeMonth-1)*20 + "px");
 }
 
 </script>

@@ -39,14 +39,9 @@ function load_moon_phases(obj){
 	}
 	configMoon.LDZ=new Date(configMoon.year,configMoon.month-1,1)/1000
 
-	// load_moon_phases(configMoon)
-	// loadNexDates(configMoon)
-	// loadPrevDates(configMoon)
-
 }
 document.addEventListener("DOMContentLoaded", configAMoon(new Date().getMonth()+1),
 load_moon_phases(configMoon),
-loadNexDates(configMoon),
-loadPrevDates(configMoon),
+loadNexDates(configMoon)
 )
 </script>
