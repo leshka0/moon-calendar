@@ -39,6 +39,7 @@ function initDrag(){
   var originCurrentPosition = -(range-1)*20;
   var originMonthPosition = -(rangeMonth-1)*20;
   var month = new Date().getMonth()+1;
+  var velocityInterval;
 
   // CLICK
   $(".dragme").mousedown(function(e) {
@@ -48,10 +49,8 @@ function initDrag(){
     hideInfos();
   });
   // DRAG
-  $(".dragme").mousemove(function(e) {
-    if (isDrag) {
-      // calculate the dragged distance
-      differenceX = e.pageX - originX;
+  function upDate(e){
+      updateInfos()
       // get current positions
       nextPosition = parseInt($(".next").css("left"), 10);
       prevPosition = parseInt($(".prev").css("right"), 10);
@@ -59,12 +58,14 @@ function initDrag(){
       // calculate new positions
       newnextPosition = nextPosition + differenceX;
       newprevPosition = prevPosition - differenceX;
+      // console.log(newnextPosition + newprevPosition);
 
 
 
       // calculate the offcet and round at 2 decimals
       offcet -= differenceX/100;
       offcet = (offcet.toFixed(2));
+      // console.log(offcet);
 
       // fix the distance -0 bug
       if (offcet<0 && offcet>-1){
@@ -122,15 +123,50 @@ function initDrag(){
 
       // equalise the difference
       originX = e.pageX;
+
+  }
+
+  $(".dragme").mousemove(function(e) {
+    if (isDrag) {
+      // calculate the dragged distance
+      differenceX = e.pageX - originX;
+      upDate(e)
     }
   });
+
+  // velocity
+  function velocityFunc(e){
+    // console.log("VELOCITY = " + differenceX);
+    differenceX = Math.round(differenceX/1.5);
+    // differenceX = (differenceX.toFixed(2));
+    if (differenceX<2 && differenceX>-2){
+        endDrag();
+        console.log("END");
+    }
+    else {
+      upDate(e);
+    }
+  }
+
   // RELEASE
   $(".dragme").mouseup(function(e) {
-    // console.log( "MOUSE UP" );
+    console.log( "MOUSE UP" );
+    velocity = differenceX;
     isDrag = false;
     $(".dragme").removeClass("dropme");
-    updateInfos()
+    // console.log("VELOCITY = " + velocity);
+    velocityInterval = setInterval(function(){velocityFunc(e)}, 20);
+
+
+
   });
+
+
+  function endDrag(){
+    clearInterval(velocityInterval);
+    updateInfos();
+    unhide();
+  }
 }
 window.onload = initDrag();
 </script>

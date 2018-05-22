@@ -15,6 +15,7 @@
 			color: white;
 			font-family: 'Aqua', Arial, sans-serif;
 			text-transform: uppercase;
+			letter-spacing: 4px;
 		}
 			body {
 				margin: 0px;
@@ -26,6 +27,7 @@
 				position: absolute;
 				top: 200px;
 				left: 200px;
+				opacity: 0;
 			}
 		</style>
 	</head>

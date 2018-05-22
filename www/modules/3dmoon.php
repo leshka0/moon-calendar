@@ -121,7 +121,7 @@
 				halo.position.set(Math.cos(lightRot)*12,0,0);
 				// console.log(halo.material.opacity);
 				renderer.render( scene, camera );
-
+				
 			}
 
 		</script>

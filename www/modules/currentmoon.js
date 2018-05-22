@@ -104,4 +104,5 @@ function example_1(moon) {
   // include in the webgl
   light3dchange();
   updateInfos();
+  unhide();
 }

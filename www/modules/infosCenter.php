@@ -1,7 +1,6 @@
 <style>
 	.infosCenter{
 		font-size: 10px;
-		letter-spacing: 2px;
 		color: white;
 		position: absolute;
 		top: 25vh;
@@ -15,11 +14,11 @@
 		justify-content: center;
 		text-align: center;
 		opacity: 1;
-		transition: all 2s ease;
+		transition: all 5s ease;
 	}
 	.hide{
-		opacity: 0;
-		transition: all 0.5s ease;
+		opacity: 0 !important;
+		transition: all 0.8s ease !important;
 	}
 	.bigZodiac{
 		opacity: .7;
@@ -32,7 +31,8 @@
 		bottom: 20%;
 		left: 20%;
 		right: 20%;
-		filter: drop-shadow(0px 2px 4px #000000);
+		transition: all 2s ease;
+		/* filter: drop-shadow(0px 2px 4px #000000); */
 	}
 	.zodiacName{
 		font-size: 3em;
@@ -40,6 +40,15 @@
 		bottom: calc(20% - 60px);
 		left: 0;
 		right: 0;
+		opacity: 1;
+		transition: all 2s ease;
+	}
+	.percent{
+		position: absolute;
+		bottom: calc(20% - 75px);
+		left: 0;
+		right: 0;
+		opacity: .2;
 	}
 	.phaseName{
 		position: absolute;
@@ -47,9 +56,12 @@
     left: 0;
     right: 0;
 	}
+	.distance{
+		opacity: .2;
+	}
 </style>
 
-<div class="infosCenter hide interface">
+<div class="infosCenter interface">
 	<div class="phaseName ">
 		No Moon in
 	</div>
@@ -71,14 +83,18 @@
 
 function hideInfos() {
 	$(".zodiacName").addClass("hide");
-	$(".infosCenter").addClass("hide");
+	$(".bigZodiac").addClass("hide");
+	console.log("hide");
+	// $(".infosCenter").addClass("hide");
 }
 function updateInfos() {
-	console.log(moon.phase[day]);
 	$(".distance").html(moon.phase[day].dis.toFixed(0)+ " KM");
-	$(".percent").html(moon.phase[day].lighting.toFixed(2));
+	$(".percent").html(moon.phase[day].lighting.toFixed(2) + " %");
 	$(".phaseName").html(moon.phase[day].phaseName + " IN");
+}
+function unhide() {
 	$(".hide").removeClass("hide");
 }
+
 
 </script>

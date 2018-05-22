@@ -39,15 +39,11 @@
 		margin: 0px;
 		/* background-color: rgba(130,130,130,.05); */
 		font-size: 10px;
-		letter-spacing: 4px;
+		/* letter-spacing: 4px; */
 		border-bottom: 25px solid grey;
 		border-image: url("img/ruler2x.png") 100 0 round;
 	}
 	.currentDate{
-		/* font-family: sans-serif; */
-
-		letter-spacing: 2px;
-		/* color: white; */
 		position: absolute;
 		top: 20vh;
 		left: 50%;
@@ -76,7 +72,7 @@
 	.month{
 		/* background-color: red; */
 		transition: all .2s ease;
-		width: 26px;
+		width: 36px;
 		height: 10px;
 	}
 	.currentDateNumbr{
@@ -87,17 +83,15 @@
 		height: 20px;
 		margin: 0px;
 		/* background-color: rgba(130,130,130,.05); */
-		font-size: 10px;
 	}
 	.monthNumbr{
 			text-align: left;
 			color: white;
 			display: inline-block;
-			width: 26px;
+			width: 36px;
 			height: 20px;
 			margin: 0px;
 			background-color: rgba(130,130,130,.05);
-			font-size: 10px;
 	}
 </style>
 
