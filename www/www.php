@@ -6,6 +6,16 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<script src="build/jquery-3.3.1.min.js"></script>
 		<style>
+		@font-face {
+		  font-family: 'Aqua';
+		  src: url('fonts/aqua.ttf'); /* IE9 Compat Modes */
+		}
+		.interface{
+			font-size: 10px;
+			color: white;
+			font-family: 'Aqua', Arial, sans-serif;
+			text-transform: uppercase;
+		}
 			body {
 				margin: 0px;
 				background-color: #333;
@@ -37,6 +47,8 @@
 		<script type="text/javascript" src="modules/currentmoon.js"></script>
 		<!-- future dates on the ruller-->
 		<?php include("modules/future_phases.php"); ?>
+		<!-- future dates on the ruller-->
+		<?php include("modules/infosCenter.php"); ?>
 		<!-- drag and drop -->
 		<?php include("modules/draganddrop.php"); ?>
 		<!-- WEBGL -->

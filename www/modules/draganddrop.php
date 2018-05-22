@@ -45,6 +45,7 @@ function initDrag(){
     isDrag = true;
     originX = e.pageX;
     $(".dragme").addClass("dropme");
+    hideInfos();
   });
   // DRAG
   $(".dragme").mousemove(function(e) {
@@ -128,6 +129,7 @@ function initDrag(){
     // console.log( "MOUSE UP" );
     isDrag = false;
     $(".dragme").removeClass("dropme");
+    updateInfos()
   });
 }
 window.onload = initDrag();

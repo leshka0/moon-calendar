@@ -1,14 +1,14 @@
 <style>
 	.prev{
-		font-family: sans-serif;
+		/* font-family: sans-serif; */
 		color: white;
 		position: absolute;
 		text-align: right;
 	}
 	.next{
-		font-family: sans-serif;
+		/* font-family: sans-serif; */
 		position: absolute;
-		color: white;
+		/* color: white; */
 		text-align: left;
 	}
 	.prevContainer{
@@ -35,7 +35,7 @@
 		color: white;
 		display: inline-block;
 		width: 100px;
-		height: 25px;
+		height: 22px;
 		margin: 0px;
 		/* background-color: rgba(130,130,130,.05); */
 		font-size: 10px;
@@ -44,10 +44,10 @@
 		border-image: url("img/ruler2x.png") 100 0 round;
 	}
 	.currentDate{
-		font-family: sans-serif;
-		font-size: 10px;
+		/* font-family: sans-serif; */
+
 		letter-spacing: 2px;
-		color: white;
+		/* color: white; */
 		position: absolute;
 		top: 20vh;
 		left: 50%;
@@ -70,20 +70,20 @@
 	.current{
 		/* background-color: red; */
 		transition: all .2s ease;
-		width: 20px;
+		width: 19px;
 		height: 10px;
 	}
 	.month{
 		/* background-color: red; */
 		transition: all .2s ease;
-		width: 27px;
+		width: 26px;
 		height: 10px;
 	}
 	.currentDateNumbr{
 		text-align: right;
 		color: white;
 		display: inline-block;
-		width: 20px;
+		width: 19px;
 		height: 20px;
 		margin: 0px;
 		/* background-color: rgba(130,130,130,.05); */
@@ -93,7 +93,7 @@
 			text-align: left;
 			color: white;
 			display: inline-block;
-			width: 27px;
+			width: 26px;
 			height: 20px;
 			margin: 0px;
 			background-color: rgba(130,130,130,.05);
@@ -102,15 +102,15 @@
 </style>
 
 <div class="nextContainer">
-	<div class="next">
+	<div class="next interface">
 	</div>
 </div>
 <div class="prevContainer">
-	<div class="prev">
+	<div class="prev interface">
 	</div>
 </div>
-<div class="currentDate">
-	<div style="display: flex; justify-content: center; margin-left:-50%;">
+<div class="currentDate interface">
+	<div style="display: flex; justify-content: center; margin-left:-100%;">
 		<div class="currentContainer">
 			<div class="current">
 			</div>

@@ -103,4 +103,5 @@ function example_1(moon) {
   text();
   // include in the webgl
   light3dchange();
+  updateInfos();
 }
