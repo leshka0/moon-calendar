@@ -15,7 +15,7 @@
 			color: white;
 			font-family: 'Aqua', Arial, sans-serif;
 			text-transform: uppercase;
-			letter-spacing: 4px;
+			letter-spacing: 5px;
 		}
 			body {
 				margin: 0px;

@@ -1,4 +1,22 @@
 <style>
+	.circle{
+	 position: absolute;
+	 /* top: 25vh; */
+	 /* left: calc(50vw - (50vh / 2)); */
+	 left: 35vw;
+	 right: 35vw;
+	 top: calc(50vh - (30vw / 2));
+	 /* bottom: 0; */
+	 height: 30vw;
+	 /* width: 50vh; */
+	 /* height: 50vh; */
+	 /* right: auto; */
+	 /* background-color: rgba(255,255,0,0.3); */
+	 background-position: center;
+	 background-size: contain;
+	 background-repeat: no-repeat;
+	 background-image: url("img/circle.svg");
+	}
 	.infosCenter{
 		font-size: 10px;
 		color: white;
@@ -58,9 +76,14 @@
 	}
 	.distance{
 		opacity: .2;
+		position: absolute;
+    /* bottom: calc(20% - 120px); */
+		top: -20px;
+    left: 0;
+    right: 0;
 	}
 </style>
-
+<div class="circle"></div>
 <div class="infosCenter interface">
 	<div class="phaseName ">
 		No Moon in

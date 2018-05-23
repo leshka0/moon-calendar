@@ -182,9 +182,16 @@ function monthNames(x){
 function loadNexDates(configMoon){
 	for (var i = -range; i < range-1; i++) {
 		nextDay.setDate(nextDay.getDate() + 1);
-		$(".next").append("<div class='date'>" +nextDay.getDate()+ "</div>");
-		$(".prev").append("<div class='date'>" +nextDay.getDate()+ "</div>");
-		$(".current").append("<div class='currentDateNumbr'>" +nextDay.getDate()+ "</div>");
+		if (nextDay.getDate() == 1){
+			$(".next").append("<div class='date'>" +nextDay.getDate()+ monthNames(nextDay.getMonth()+1) +" </div>");
+			$(".prev").append("<div class='date'>" +nextDay.getDate()+ monthNames(nextDay.getMonth()+1) +" </div>");
+			$(".current").append("<div class='currentDateNumbr'>" +nextDay.getDate()+ "</div>");
+		}
+		else{
+			$(".next").append("<div class='date'>" +nextDay.getDate()+ "</div>");
+			$(".prev").append("<div class='date'>" +nextDay.getDate()+ "</div>");
+			$(".current").append("<div class='currentDateNumbr'>" +nextDay.getDate()+ "</div>");
+		}
 	}
 	for (var i = -rangeMonth; i < rangeMonth - 1; i++) {
 		nextMonth.setMonth( nextMonth.getMonth( ) + 1 );
