@@ -30,6 +30,8 @@ function initDrag(){
   var differenceX =0;
   var nextPosition =0;
   var prevPosition =0;
+  var nextPosition_moon =0;
+  var prevPosition_moon =0;
   var currentPosition =0;
   var offcet=0;
   var currentDateOffcet =0
@@ -55,10 +57,14 @@ function initDrag(){
       nextPosition = parseInt($(".next").css("left"), 10);
       prevPosition = parseInt($(".prev").css("right"), 10);
       currentPosition = parseInt($(".current").css("margin-top"), 10);
+      nextPosition_moon = parseInt($(".next_moon").css("left"), 10);
+      prevPosition_moon = parseInt($(".perv_moon").css("right"), 10);
+
       // calculate new positions
       newnextPosition = nextPosition + differenceX;
       newprevPosition = prevPosition - differenceX;
-      // console.log(newnextPosition + newprevPosition);
+      newnextPosition_moon = nextPosition_moon + differenceX;
+      newprevPosition_moon = prevPosition_moon - differenceX;
 
 
 
@@ -120,6 +126,8 @@ function initDrag(){
       // change position timeline
       $(".prev").css("right",newprevPosition +"px");
       $(".next").css("left", newnextPosition +"px");
+      $(".perv_moon").css("right",newprevPosition_moon +"px");
+      $(".next_moon").css("left", newnextPosition_moon +"px");
 
       // equalise the difference
       originX = e.pageX;

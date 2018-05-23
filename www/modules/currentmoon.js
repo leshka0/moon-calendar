@@ -99,7 +99,7 @@ function text() {
   document.getElementById("ex1").innerHTML = html;
 }
 
-function example_1(moon) {
+function start(moon) {
   text();
   // include in the webgl
   light3dchange();

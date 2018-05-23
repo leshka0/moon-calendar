@@ -4,60 +4,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
-  <script type="text/javascript" src="build/dat.gui.js"></script>
   <script type="text/javascript">
-    var obj = {
-        message: 'Hello World',
-        displayOutline: false,
+  var d = new Date();
 
-        maxSize: 6.0,
-        speed: 5,
+d.setDate(1);
+d.setMonth(0);
+d.setYear(2018);
 
-        height: 10,
-        noiseStrength: 10.2,
-        growthSpeed: 0.2,
+var nA = new Date();
+nA.setDate(17);
+nA.setMonth(0);
+nA.setYear(2018);
+var daydiff = Math.round((nA - d) / (1000 * 60 * 60 * 24));
+console.log(daydiff);
 
-        type: 'three',
+var nb = new Date();
+nb.setDate(15);
+nb.setMonth(1);
+nb.setYear(2018);
+var daydiff = Math.round((nb - d) / (1000 * 60 * 60 * 24));
+console.log(daydiff);
 
-        explode: function () {
-          alert('Bang!');
-        },
+var nD = new Date();
+nD.setDate(17);
+nD.setMonth(2);
+nD.setYear(2018);
+var daydiff = Math.round((nD - d) / (1000 * 60 * 60 * 24));
+console.log(daydiff);
 
-        color0: "#ffae23", // CSS string
-        color1: [ 0, 128, 255 ], // RGB array
-        color2: [ 0, 128, 255, 0.3 ], // RGB with alpha
-        color3: { h: 350, s: 0.9, v: 0.3 } // Hue, saturation, value
-    };
+var nE = new Date();
+nE.setDate(16);
+nE.setMonth(3);
+nE.setYear(2018);
+var daydiff = Math.round((nE - d) / (1000 * 60 * 60 * 24));
+console.log(daydiff);
 
-    var gui = new dat.gui.GUI();
+var nF = new Date();
+nF.setDate(15);
+nF.setMonth(4);
+nF.setYear(2018);
+var daydiff = Math.round((nF - d) / (1000 * 60 * 60 * 24));
+console.log(daydiff);
 
-    gui.remember(obj);
+var nG = new Date();
+nG.setDate(13);
+nG.setMonth(5);
+nG.setYear(2018);
+var daydiff = Math.round((nG - d) / (1000 * 60 * 60 * 24));
+console.log(daydiff);
 
-    gui.add(obj, 'message');
-    gui.add(obj, 'displayOutline');
-    gui.add(obj, 'explode');
+var nH = new Date();
+nH.setDate(13);
+nH.setMonth(6);
+nH.setYear(2018);
+var daydiff = Math.round((nH - d) / (1000 * 60 * 60 * 24));
+console.log(daydiff);
 
-    gui.add(obj, 'maxSize').min(-10).max(10).step(0.25);
-    gui.add(obj, 'height').step(5); // Increment amount
+var nI = new Date();
+nI.setDate(11);
+nI.setMonth(7);
+nI.setYear(2018);
+var daydiff = Math.round((nI - d) / (1000 * 60 * 60 * 24));
+console.log(daydiff);
 
-    // Choose from accepted values
-    gui.add(obj, 'type', [ 'one', 'two', 'three' ] );
+var nJ = new Date();
+nJ.setDate(9);
+nJ.setMonth(8);
+nJ.setYear(2018);
+var daydiff = Math.round((nJ - d) / (1000 * 60 * 60 * 24));
+console.log(daydiff);
 
-    // Choose from named values
-    gui.add(obj, 'speed', { Stopped: 0, Slow: 0.1, Fast: 5 } );
+var nK = new Date();
+nK.setDate(9);
+nK.setMonth(9);
+nK.setYear(2018);
+var daydiff = Math.round((nK - d) / (1000 * 60 * 60 * 24));
+console.log(daydiff);
 
-    var f1 = gui.addFolder('Colors');
-    f1.addColor(obj, 'color0');
-    f1.addColor(obj, 'color1');
-    f1.addColor(obj, 'color2');
-    f1.addColor(obj, 'color3');
+var nL = new Date();
+nL.setDate(7);
+nL.setMonth(10);
+nL.setYear(2018);
+var daydiff = Math.round((nL - d) / (1000 * 60 * 60 * 24));
+console.log(daydiff);
 
-    var f2 = gui.addFolder('Another Folder');
-    f2.add(obj, 'noiseStrength');
-
-    var f3 = f2.addFolder('Nested Folder');
-    f3.add(obj, 'growthSpeed');
-
-  </script>
+var nM = new Date();
+nM.setDate(7);
+nM.setMonth(11);
+nM.setYear(2018);
+var daydiff = Math.round((nM - d) / (1000 * 60 * 60 * 24));
+console.log(daydiff);
+//
+// var nN = new Date();
+// nN.setDate(22);
+// nN.setMonth(11);
+// nN.setYear(2018);
+// var daydiff = Math.round((nN - d) / (1000 * 60 * 60 * 24));
+// console.log(daydiff);
+</script>
 </body>
 </html>

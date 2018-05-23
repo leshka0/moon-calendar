@@ -8,6 +8,7 @@
 var moon
 var configMoon
 var monthIndex = new Date().getMonth() + 1
+var isFunctionCalled = false;
 
 function load_moon_phases(obj){
 	var gets=[]
@@ -18,8 +19,20 @@ function load_moon_phases(obj){
 	var url = "http://www.icalendar37.net/lunar/api/?"+gets.join("&")
 	xmlhttp.onreadystatechange = function() {
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-			moon  = JSON.parse(xmlhttp.responseText)
-			example_1(moon)
+			moon = JSON.parse(xmlhttp.responseText)
+			start(moon)
+			// loadNexDates_moon(configMoon)
+			console.log();
+			if(isFunctionCalled == false){
+				console.log("FIST TIMELINE LOAD");
+			    loadNexDates_moon(configMoon);
+			    isFunctionCalled = true;
+			} else {
+				console.log("NEW TIMELINE LOAD");
+					// clearMoonTimeline();
+			    // loadNexDates_moon(configMoon);
+			}
+
 		}
 	}
 	xmlhttp.open("GET", url, true)

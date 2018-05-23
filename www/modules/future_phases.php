@@ -32,7 +32,7 @@
 	}
 	.date{
 		text-align: center;
-		color: white;
+		color: #666;
 		display: inline-block;
 		width: 100px;
 		height: 22px;
@@ -120,7 +120,7 @@
 
 <script type="text/javascript">
 
-var moon
+// var moon
 var currentDay = new Date(new Date());
 var range = 200;
 var rangeMonth = 20;
@@ -132,7 +132,7 @@ var nextDay = new Date(startingDay);
 var prevDay = new Date(startingDay);
 var nextMonth = new Date(startingMonth);
 // console.log("CURRENT : "+currentDay);
-// console.log("STARTING DAY : "+startingDay);
+console.log("STARTING DAY : "+startingDay);
 console.log("STARTING MONTH : "+nextMonth);
 
 function monthNames(x){

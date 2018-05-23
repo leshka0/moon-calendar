@@ -25,9 +25,9 @@
 			}
 			#ex1{
 				position: absolute;
-				top: 200px;
-				left: 200px;
-				opacity: 0;
+				top: 20px;
+				left: 20px;
+				opacity: 1;
 			}
 		</style>
 	</head>
@@ -49,6 +49,7 @@
 		<script type="text/javascript" src="modules/currentmoon.js"></script>
 		<!-- future dates on the ruller-->
 		<?php include("modules/future_phases.php"); ?>
+		<?php include("modules/future_phases_moon.php"); ?>
 		<!-- future dates on the ruller-->
 		<?php include("modules/infosCenter.php"); ?>
 		<!-- drag and drop -->
