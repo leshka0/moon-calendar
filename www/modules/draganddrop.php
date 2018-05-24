@@ -2,11 +2,11 @@
 <style>
   .dragme {
     position: fixed;
-    top: 40vh;
+    top: 20vh;
     left:0;
     right: 0;
-    bottom: 40vh;
-    cursor: col-resize;
+    bottom: 20vh;
+    cursor: grab;
     /* background-color: rgba(255, 255, 50, 0.05); */
   }
   .dropme {
@@ -15,6 +15,7 @@
     right: 0;
     bottom: 0;
     background-color: transparent;
+    cursor: none;
   }
 </style>
 

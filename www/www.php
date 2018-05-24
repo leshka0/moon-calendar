@@ -22,6 +22,7 @@
 				background-color: #333;
 				overflow: hidden;
 				color: #888;
+				cursor: crosshair;
 			}
 			#ex1{
 				position: absolute;
@@ -47,8 +48,6 @@
 		<?php include("modules/3dmoon.php"); ?>
 		<!-- current state -->
 		<script type="text/javascript" src="modules/currentmoon.js"></script>
-		<!-- zodiac -->
-		<script type="text/javascript" src="modules/zodiac.js"></script>
 		<!-- future dates on the ruller-->
 		<?php include("modules/future_phases.php"); ?>
 		<?php include("modules/future_phases_moon.php"); ?>
@@ -58,6 +57,8 @@
 		<?php include("modules/draganddrop.php"); ?>
 		<!-- WEBGL -->
 		<?php include("modules/load_moon_phases.php"); ?>
+		<!-- zodiac -->
+		<script type="text/javascript" src="modules/zodiac.js"></script>
 
 	</body>
 </html>

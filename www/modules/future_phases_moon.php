@@ -41,14 +41,31 @@
 		/* border-bottom: 25px solid grey; */
 		border-image: url("img/ruler2x.png") 100 0 round;
 	}
+	.next_zodiac{
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+	.prev_zodiac{
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+	.zodiac{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 </style>
 
 <div class="next_moonContainer">
 	<div class="next_moon interface">
+		<div class="next_zodiac"></div>
 	</div>
 </div>
 <div class="perv_moonContainer">
 	<div class="perv_moon interface">
+		<div class="prev_zodiac"></div>
 	</div>
 </div>
 
@@ -65,7 +82,7 @@ console.log("startingDay_moon : " + range_moon);
 
 var nextDay_moon = new Date(startingDay_moon);
 var perv_moonDay = new Date(startingDay_moon);
-console.log("STARTING DAY MOON : "+startingDay_moon);
+console.log("STARTING DAY MOON : " + startingDay_moon);
 
 // clear the timeline
 function clearMoonTimeline(){
@@ -76,10 +93,6 @@ function clearMoonTimeline(){
 	startingDay_moon.setDate(currentDay.getDate() - range_moon);
 	nextDay_moon = new Date(startingDay_moon);
 	perv_moonDay = new Date(startingDay_moon);
-	// console.log(currentDay);
-	// console.log(startingDay_moon);
-	// console.log(nextDay_moon);
-	// console.log(perv_moonDay);
 }
 // load dates timeline
 function loadNexDates_moon(configMoon){
@@ -87,9 +100,6 @@ function loadNexDates_moon(configMoon){
 		prevDay = day
 		nextDay_moon.setDate(nextDay_moon.getDate() + 1);
 		day = nextDay_moon.getDate();
-
-		// console.log("LOL + " + day);
-		// console.log(moon.phase[day].phaseName);
 
 		// FULLMOON VALUES FOR 2018
 		if (i+1 == 1 || i+1 == 30 || i+1 == 60 || i+1 == 89 || i+1 == 119 || i+1 == 148 || i+1 == 178 || i+1 == 207 || i+1 == 237 || i+1 == 267 || i+1 == 296 || i+1 == 326 || i+1 == 355)  {
@@ -104,24 +114,8 @@ function loadNexDates_moon(configMoon){
 			$(".next_moon").append("<div class='date_moon'> &nbsp; </div>");
 			$(".perv_moon").append("<div class='date_moon'> &nbsp; </div>");
 		}
-
-
-		//
-		// if (moon.phase[prevDay].phaseName != moon.phase[day].phaseName) {
-		// 	name = moon.phase[day].phaseName;
-		// 	nameToDisplay = name.slice(0, 3);
-		// 	$(".next_moon").append("<div class='date'>" + nameToDisplay +" </div>");
-		// 	$(".perv_moon").append("<div class='date'>" + nameToDisplay +" </div>");
-		// }
-		// else {
-		// 	$(".next_moon").append("<div class='date'> &nbsp; </div>");
-		// 	$(".perv_moon").append("<div class='date'> &nbsp; </div>");
-		// }
-
 	}
-
 	$(".next_moon").css("left",-range_moon*100 + 50 + "px");
 	$(".perv_moon").css("right",-range_moon*100 + 50 + "px");
 }
-
 </script>
