@@ -166,6 +166,17 @@ function initDrag(){
 
   function endDrag(){
     clearInterval(velocityInterval);
+
+    // detect zodiac name on the left
+    var updateZodiac
+    $( ".zodiac" ).each(function( index ) {
+      var zodiacPosition = parseInt($( this ).css("margin-left"), 10);
+      if (-zodiacPosition > newnextPosition_moon) {
+        updateZodiac = $( this ).text();
+      }
+    });
+    console.log("THE SIGN IS : "+updateZodiac);
+
     updateInfos();
     unhide();
   }

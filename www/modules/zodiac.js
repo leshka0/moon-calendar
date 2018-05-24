@@ -37,8 +37,8 @@ function timeFromBeggining(x) {
   date.setMonth(month - 1);
   date.setYear(year);
   var daydiff = (date - d) / (1000 * 60 * 60 * 24);
-  console.log(daydiff.toFixed(4));
-	console.log(x.minute);
+  // console.log(daydiff.toFixed(4));
+	// console.log(x.minute);
   return daydiff.toFixed(4);
 }
 
@@ -473,8 +473,8 @@ var zodiac4 = [
 // Test
 var test = {
   sign:   "test",
-  hour:   00,
-  minute: 01,
+  hour:   12,
+  minute: 30,
   day:    25,
   month:  5,
   year:   2018
