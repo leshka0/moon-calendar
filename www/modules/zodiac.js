@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-</head>
-<body>
-  <script type="text/javascript">
 var d = new Date();
 d.setSeconds(0);
 d.setHours(0);
@@ -391,6 +384,3 @@ var compareA = libra2;
 var compareB = libra3;
 console.log("compare :");
 compareTime(compareA, compareB);
-</script>
-</body>
-</html>

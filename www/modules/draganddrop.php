@@ -128,6 +128,7 @@ function initDrag(){
       $(".next").css("left", newnextPosition +"px");
       $(".perv_moon").css("right",newprevPosition_moon +"px");
       $(".next_moon").css("left", newnextPosition_moon +"px");
+      $(".circle").css({ WebkitTransform: 'rotate(' + newprevPosition/50 + 'deg)'});
 
       // equalise the difference
       originX = e.pageX;
@@ -144,12 +145,9 @@ function initDrag(){
 
   // velocity
   function velocityFunc(e){
-    // console.log("VELOCITY = " + differenceX);
     differenceX = Math.round(differenceX/1.5);
-    // differenceX = (differenceX.toFixed(2));
     if (differenceX<2 && differenceX>-2){
         endDrag();
-        console.log("END");
     }
     else {
       upDate(e);
@@ -158,15 +156,10 @@ function initDrag(){
 
   // RELEASE
   $(".dragme").mouseup(function(e) {
-    console.log( "MOUSE UP" );
     velocity = differenceX;
     isDrag = false;
     $(".dragme").removeClass("dropme");
-    // console.log("VELOCITY = " + velocity);
     velocityInterval = setInterval(function(){velocityFunc(e)}, 20);
-
-
-
   });
 
 

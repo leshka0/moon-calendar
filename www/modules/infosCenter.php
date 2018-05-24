@@ -107,7 +107,7 @@
 function hideInfos() {
 	$(".zodiacName").addClass("hide");
 	$(".bigZodiac").addClass("hide");
-	console.log("hide");
+	// console.log("hide");
 	// $(".infosCenter").addClass("hide");
 }
 function updateInfos() {

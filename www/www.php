@@ -47,6 +47,8 @@
 		<?php include("modules/3dmoon.php"); ?>
 		<!-- current state -->
 		<script type="text/javascript" src="modules/currentmoon.js"></script>
+		<!-- zodiac -->
+		<script type="text/javascript" src="modules/zodiac.js"></script>
 		<!-- future dates on the ruller-->
 		<?php include("modules/future_phases.php"); ?>
 		<?php include("modules/future_phases_moon.php"); ?>
