@@ -1,7 +1,7 @@
 var d = new Date();
-d.setSeconds(0);
-d.setHours(0);
-d.setMinutes(0);
+// d.setSeconds(0);
+// d.setHours(0);
+// d.setMinutes(0);
 d.setDate(1);
 d.setMonth(0);
 d.setYear(2018);
@@ -21,14 +21,14 @@ function checkTime(x) {
   // var daydiff = (date - d) / (1000 * 60 * 60 * 24);
   console.log("DATE CHECK :");
   console.log(date);
-  // return date.toFixed(4);
+	console.log(x.minute);
 }
 
 function timeFromBeggining(x) {
   var date = new Date();
   var hours = x.hour;
   var minutes = x.minute;
-  var day = x.day - 1;
+  var day = x.day;
   var month = x.month;
   var year = x.year;
   date.setHours(hours);
@@ -37,7 +37,8 @@ function timeFromBeggining(x) {
   date.setMonth(month - 1);
   date.setYear(year);
   var daydiff = (date - d) / (1000 * 60 * 60 * 24);
-  // console.log(daydiff.toFixed(4));
+  console.log(daydiff.toFixed(4));
+	console.log(x.minute);
   return daydiff.toFixed(4);
 }
 
@@ -472,9 +473,9 @@ var zodiac4 = [
 // Test
 var test = {
   sign:   "test",
-  hour:   15,
-  minute: 53,
-  day:    24,
+  hour:   00,
+  minute: 01,
+  day:    25,
   month:  5,
   year:   2018
 };
@@ -498,95 +499,134 @@ var zodiacQuantity = 12;
 
 function initZodiac() {
   console.log("INIT ZODIAC");
-  // + Test
-  // var testTime = test;
-  // var dist = timeFromBeggining(testTime) * 100;
-  // var appendMe =
-  //   "<div class='zodiac' style='margin-left : " +
-  //   dist +
-  //   "px'>" +
-  //   test.sign +
-  //   " </div>";
-  // // console.log(dist);
-  // $(".next_zodiac").append(appendMe);
-  // $(".prev_zodiac").append(appendMe);
 
   // + FIRST ONES
+	for (var i = 0; i < zodiac1.length; i++) {
+    var testTime = zodiac1[i];
+    var dist = timeFromBeggining(testTime) * 100;
+    var appendMe =
+      "<div class='zodiac' style='margin-left : " +
+      dist +
+      "px'>" +
+      zodiac1[i].sign +
+      " </div>";
+    $(".next_zodiac").append(appendMe);
+    $(".prev_zodiac").append(appendMe);
+  }
+	for (var i = 0; i < zodiac2.length; i++) {
+    var testTime = zodiac2[i];
+    var dist = timeFromBeggining(testTime) * 100 + 13;
+    var appendMe =
+      "<div class='zodiac' style='margin-left : " +
+      dist +
+      "px'>" +
+      zodiac2[i].sign +
+      " </div>";
+    $(".next_zodiac").append(appendMe);
+    $(".prev_zodiac").append(appendMe);
+  }
+	for (var i = 0; i < zodiac3.length; i++) {
+    var testTime = zodiac3[i];
+    var dist = timeFromBeggining(testTime) * 100 + 13;
+    var appendMe =
+      "<div class='zodiac' style='margin-left : " +
+      dist +
+      "px'>" +
+      zodiac3[i].sign +
+      " </div>";
+    $(".next_zodiac").append(appendMe);
+    $(".prev_zodiac").append(appendMe);
+  }
+	for (var i = 0; i < zodiac4.length; i++) {
+    var testTime = zodiac4[i];
+    var dist = timeFromBeggining(testTime) * 100 + 13;
+    var appendMe =
+      "<div class='zodiac' style='margin-left : " +
+      dist +
+      "px'>" +
+      zodiac3[i].sign +
+      " </div>";
+    $(".next_zodiac").append(appendMe);
+    $(".prev_zodiac").append(appendMe);
+  }
+		// TEST
+    var testTime = test
+    var dist = timeFromBeggining(testTime) * 100 + 13;
+    var appendMe =
+      "<div class='zodiac' style='margin-left : " +
+      dist +
+      "px'>" +
+      "." +
+      " </div>";
+    $(".next_zodiac").append(appendMe);
+    $(".prev_zodiac").append(appendMe);
+
+
+
+	// calculate with difference
+
+  // // + ZODIAC PLACEMENT
   // for (var i = 0; i < zodiac1.length; i++) {
-  //   var testTime = zodiac1[i];
-  //   var dist = timeFromBeggining(testTime) * 100;
-  //   var appendMe =
-  //     "<div class='zodiac' style='margin-left : " +
-  //     dist +
-  //     "px'>" +
-  //     "FIRST" +
-  //     " </div>";
-  //   $(".next_zodiac").append(appendMe);
-  //   $(".prev_zodiac").append(appendMe);
+  //   var compareA = zodiac2[i];
+  //   var compareB = zodiac3[i];
+  //   var frequency = compareTime(compareA, compareB);
+	//
+  //   for (var j = 0; j < zodiacQuantity; j++) {
+  //     var distfirst = timeFromBeggining(compareA) * 100;
+  //     var dist = distfirst + frequency * j * 100;
+  //     // console.log(compareA);
+  //     var appendMe =
+  //       "<div class='zodiac' style=' color : blue; margin-left : " +
+  //       dist +
+  //       "px'>" +
+  //       zodiac1[i].sign +
+  //       " </div>";
+  //     $(".next_zodiac").append(appendMe);
+  //     $(".prev_zodiac").append(appendMe);
+  //   }
   // }
-
-  // + ZODIAC PLACEMENT
-  for (var i = 0; i < zodiac1.length; i++) {
-    var compareA = zodiac2[i];
-    var compareB = zodiac3[i];
-    var frequency = compareTime(compareA, compareB);
-
-    for (var j = 0; j < zodiacQuantity; j++) {
-      var distfirst = timeFromBeggining(compareA) * 100;
-      var dist = distfirst + frequency * j * 100;
-      // console.log(compareA);
-      var appendMe =
-        "<div class='zodiac' style=' color : blue; margin-left : " +
-        dist +
-        "px'>" +
-        zodiac1[i].sign +
-        " </div>";
-      $(".next_zodiac").append(appendMe);
-      $(".prev_zodiac").append(appendMe);
-    }
-  }
-
-	// + ZODIAC PLACEMENT 2
-  for (var i = 0; i < zodiac1.length; i++) {
-    var compareA = zodiac1[i];
-    var compareB = zodiac2[i];
-    var frequency = compareTime(compareA, compareB);
-
-    for (var j = 0; j < zodiacQuantity; j++) {
-      var distfirst = timeFromBeggining(compareA) * 100;
-      var dist = distfirst + frequency * j * 100;
-      // console.log(compareA);
-      var appendMe =
-        "<div class='zodiac' style=' color : red; margin-left : " +
-        dist +
-        "px'>" +
-        zodiac1[i].sign +
-        " </div>";
-      $(".next_zodiac").append(appendMe);
-      $(".prev_zodiac").append(appendMe);
-    }
-  }
-
-	// + ZODIAC PLACEMENT 3
-  for (var i = 0; i < zodiac1.length; i++) {
-    var compareA = zodiac3[i];
-    var compareB = zodiac4[i];
-    var frequency = compareTime(compareA, compareB);
-
-    for (var j = 0; j < zodiacQuantity; j++) {
-      var distfirst = timeFromBeggining(compareA) * 100;
-      var dist = distfirst + frequency * j * 100;
-      // console.log(compareA);
-      var appendMe =
-        "<div class='zodiac' style=' color : yellow; margin-left : " +
-        dist +
-        "px'>" +
-        zodiac1[i].sign +
-        " </div>";
-      $(".next_zodiac").append(appendMe);
-      $(".prev_zodiac").append(appendMe);
-    }
-  }
+	//
+	// // + ZODIAC PLACEMENT 2
+  // for (var i = 0; i < zodiac1.length; i++) {
+  //   var compareA = zodiac1[i];
+  //   var compareB = zodiac2[i];
+  //   var frequency = compareTime(compareA, compareB);
+	//
+  //   for (var j = 0; j < zodiacQuantity; j++) {
+  //     var distfirst = timeFromBeggining(compareA) * 100;
+  //     var dist = distfirst + frequency * j * 100;
+  //     // console.log(compareA);
+  //     var appendMe =
+  //       "<div class='zodiac' style=' color : red; margin-left : " +
+  //       dist +
+  //       "px'>" +
+  //       zodiac1[i].sign +
+  //       " </div>";
+  //     $(".next_zodiac").append(appendMe);
+  //     $(".prev_zodiac").append(appendMe);
+  //   }
+  // }
+	//
+	// // + ZODIAC PLACEMENT 3
+  // for (var i = 0; i < zodiac1.length; i++) {
+  //   var compareA = zodiac3[i];
+  //   var compareB = zodiac4[i];
+  //   var frequency = compareTime(compareA, compareB);
+	//
+  //   for (var j = 0; j < zodiacQuantity; j++) {
+  //     var distfirst = timeFromBeggining(compareA) * 100;
+  //     var dist = distfirst + frequency * j * 100;
+  //     // console.log(compareA);
+  //     var appendMe =
+  //       "<div class='zodiac' style=' color : yellow; margin-left : " +
+  //       dist +
+  //       "px'>" +
+  //       zodiac1[i].sign +
+  //       " </div>";
+  //     $(".next_zodiac").append(appendMe);
+  //     $(".prev_zodiac").append(appendMe);
+  //   }
+  // }
 
 }
 
