@@ -44,6 +44,17 @@ function initDrag(){
   var month = new Date().getMonth()+1;
   var velocityInterval;
 
+  var soundDrag = new Howl({
+    volume: 0.1,
+    src: ['sounds/drag.ogg']
+    // src: ['drag.ogg', 'sound.mp3']
+  });
+  var soundDate = new Howl({
+    src: ['sounds/date.ogg']
+    // src: ['drag.ogg', 'sound.mp3']
+  });
+
+
   // CLICK
   $(".dragme").mousedown(function(e) {
     isDrag = true;
@@ -51,8 +62,35 @@ function initDrag(){
     $(".dragme").addClass("dropme");
     hideInfos();
   });
+
   // DRAG
+  var soundOffcet
+  var soundOffcetCompare
+  var soundmultiplier = 0
+
   function upDate(e){
+    soundOffcet = parseFloat((offcet*1).toFixed(1));
+    if (soundOffcet != soundOffcetCompare ){
+      if (soundmultiplier >= 1){
+        soundDrag.play();
+        soundmultiplier = 0
+      }else {
+        soundmultiplier ++
+      }
+      soundOffcetCompare = soundOffcet
+      // console.log(soundOffcet);
+
+    }else {
+      var soundOffcet = parseFloat((offcet*1).toFixed(1));
+    }
+
+    // soundDragCounter = offcet.toFixed(2);
+    // console.log(soundDragCounter);
+      // if (soundDragCounter != offcet.toFixed(1)) {
+      //   soundDragCounter = offcet.toFixed(1);
+      //   soundDrag.play();
+      // }
+
       updateInfos()
       // get current positions
       nextPosition = parseInt($(".next").css("left"), 10);
@@ -72,6 +110,7 @@ function initDrag(){
       // calculate the offcet and round at 2 decimals
       offcet -= differenceX/100;
       offcet = (offcet.toFixed(2));
+
       // console.log(offcet);
 
       // fix the distance -0 bug
@@ -86,6 +125,11 @@ function initDrag(){
 
       // ONLY IF DATE CHANGE
       if (currentDateOffcet != parseInt(offcet)){
+        // play sound
+        // var vid = $('#audioDate');
+        // vid.get(0).play();
+        soundDate.play();
+
         currentDateOffcet = parseInt(offcet)
 
         //change the date
@@ -140,7 +184,7 @@ function initDrag(){
     if (isDrag) {
       // calculate the dragged distance
       differenceX = e.pageX - originX;
-      upDate(e)
+      upDate(e);
     }
   });
 

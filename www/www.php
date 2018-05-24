@@ -43,6 +43,9 @@
 		<!-- TweenLite -->
 		<script type="text/javascript" src="build/greensock/TweenLite.min.js"></script>
 		<script type="text/javascript" src="build/greensock/plugins/CSSPlugin.min.js"></script>
+		<!-- Holwer : audio -->
+		<script type="text/javascript" src="build/howler.core.js"></script>
+
 
 		<!-- WEBGL -->
 		<?php include("modules/3dmoon.php"); ?>
