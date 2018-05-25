@@ -128,6 +128,11 @@ var startingDay = new Date(new Date());
 var startingMonth = new Date(new Date());
 startingDay.setDate(currentDay.getDate() - range);
 startingMonth.setMonth(currentDay.getMonth() - rangeMonth);
+startingDay.setHours(0);
+startingDay.setMinutes(0);
+startingMonth.setHours(0);
+startingMonth.setMinutes(0);
+
 var nextDay = new Date(startingDay);
 var prevDay = new Date(startingDay);
 var nextMonth = new Date(startingMonth);

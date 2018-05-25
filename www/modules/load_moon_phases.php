@@ -26,6 +26,7 @@ function load_moon_phases(obj){
 			if(isFunctionCalled == false){
 				console.log("FIST TIMELINE LOAD");
 			    loadNexDates_moon(configMoon);
+
 			    isFunctionCalled = true;
 			} else {
 				console.log("NEW TIMELINE LOAD");
@@ -53,8 +54,13 @@ function load_moon_phases(obj){
 	configMoon.LDZ=new Date(configMoon.year,configMoon.month-1,1)/1000
 
 }
-document.addEventListener("DOMContentLoaded", configAMoon(new Date().getMonth()+1),
-load_moon_phases(configMoon),
-loadNexDates(configMoon)
-)
+// document.addEventListener("DOMContentLoaded",
+// configAMoon(new Date().getMonth()+1),
+// load_moon_phases(configMoon),
+// loadNexDates(configMoon)
+// )
+window.onload = configAMoon(new Date().getMonth()+1);
+window.onload = load_moon_phases(configMoon);
+window.onload = loadNexDates(configMoon);
+// window.onload = zodiacName();
 </script>

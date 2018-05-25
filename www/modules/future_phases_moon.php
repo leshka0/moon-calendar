@@ -13,7 +13,7 @@
 	}
 	.perv_moonContainer{
 		position: absolute;
-		top: calc(46vh + 75px);
+		top: calc(46vh + 60px);
 		right: 65vw;
 		left: -500px;
 		height: 75px;
@@ -23,7 +23,7 @@
 	}
 	.next_moonContainer{
 		position: absolute;
-		top: calc(46vh + 75px);
+		top: calc(46vh + 60px);
 		left: 65vw;
 		right: -500px;
 		height: 75px;
@@ -55,6 +55,12 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+	}
+	.icoZodiac{
+		/* margin-left: -15px; */
+		width: 30px;
+		height: 30px;
+		/* background-color: #322 */
 	}
 </style>
 

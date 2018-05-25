@@ -24,25 +24,29 @@
 
 <!-- JAVASCRIPT -->
 <script type="text/javascript">
+var isDrag = false
+var velocity =0;
+var originX =0;
+var differenceX =0;
+var nextPosition =0;
+var prevPosition =0;
+var nextPosition_moon =0;
+var prevPosition_moon =0;
+var newnextPosition_moon =0;
+var newnextPosition_moon =0;
+var currentPosition =0;
+var offcet=0;
+var currentDateOffcet =0
+var currentMonthOffcet =0
+var calculDate =0
+var calculMonth =1
+var originCurrentPosition = -(range-1)*20;
+var originMonthPosition = -(rangeMonth-1)*20;
+var month = new Date().getMonth()+1;
+var velocityInterval;
+var updateZodiac
 function initDrag(){
-  var isDrag = false
-  var velocity =0;
-  var originX =0;
-  var differenceX =0;
-  var nextPosition =0;
-  var prevPosition =0;
-  var nextPosition_moon =0;
-  var prevPosition_moon =0;
-  var currentPosition =0;
-  var offcet=0;
-  var currentDateOffcet =0
-  var currentMonthOffcet =0
-  var calculDate =0
-  var calculMonth =1
-  var originCurrentPosition = -(range-1)*20;
-  var originMonthPosition = -(rangeMonth-1)*20;
-  var month = new Date().getMonth()+1;
-  var velocityInterval;
+
 
   var soundDrag = new Howl({
     volume: 0.1,
@@ -104,7 +108,6 @@ function initDrag(){
       newprevPosition = prevPosition - differenceX;
       newnextPosition_moon = nextPosition_moon + differenceX;
       newprevPosition_moon = prevPosition_moon - differenceX;
-
 
 
       // calculate the offcet and round at 2 decimals
@@ -208,22 +211,44 @@ function initDrag(){
   });
 
 
+
   function endDrag(){
     clearInterval(velocityInterval);
-
+    zodiacName()
     // detect zodiac name on the left
-    var updateZodiac
-    $( ".zodiac" ).each(function( index ) {
-      var zodiacPosition = parseInt($( this ).css("margin-left"), 10);
-      if (-zodiacPosition > newnextPosition_moon) {
-        updateZodiac = $( this ).text();
-      }
-    });
-    console.log("THE SIGN IS : "+updateZodiac);
 
     updateInfos();
     unhide();
   }
+
+
+
 }
-window.onload = initDrag();
+
+var zodiacName
+var zodiacPosition
+zodiacName = function() {
+  nextPosition_moon = parseInt($(".next_moon").css("left"), 10);
+// detect zodiac name on the left
+$( ".zodiac" ).each(function( index ) {
+  zodiacPosition = parseInt($( this ).css("margin-left"), 10);
+  if (-zodiacPosition > nextPosition_moon) {
+    updateZodiac = $( this ).children().attr('name');
+  }
+});
+console.log("THE SIGN IS : "+updateZodiac);
+// console.log("zodiacPosition IS : "+zodiacPosition);w
+$(".zodiacName").html(updateZodiac)
+$(".bigZodiac").css("background-image", "url('img/zodiac/bigs/"+updateZodiac+".png')")
+
+}
+
+// window.onload = initDrag();
+// window.onload = zodiacName();
+$( document ).ready( initDrag )
+$( document ).ready( zodiacName )
+window.addEventListener("load", function(event) {
+    zodiacName();
+});
+
 </script>

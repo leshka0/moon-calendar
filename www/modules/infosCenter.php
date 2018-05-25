@@ -39,42 +39,43 @@
 		transition: all 0.8s ease !important;
 	}
 	.bigZodiac{
-		opacity: .7;
-		background-image: url("img/zodiac/bigs/sagitarius.png");
+		/* opacity: .7; */
+		background-image: url("img/zodiac/bigs/default.jpg");
+		/* mix-blend-mode: screen; */
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat;
 		position: absolute;
-		top: 20%;
-		bottom: 20%;
-		left: 20%;
-		right: 20%;
-		transition: all 2s ease;
+		top: 0%;
+		bottom: 0%;
+		left: 0%;
+		right: 0%;
+		transition: opacity 3s ease;
 		/* filter: drop-shadow(0px 2px 4px #000000); */
 	}
 	.zodiacName{
 		font-size: 3em;
 		position: absolute;
-		bottom: calc(20% - 60px);
+		bottom: calc(5% - 60px);
 		left: 0;
 		right: 0;
 		opacity: 1;
 		transition: all 2s ease;
 	}
-	.percent{
+	.distance{
 		position: absolute;
-		bottom: calc(20% - 75px);
+		bottom: calc(5% - 75px);
 		left: 0;
 		right: 0;
-		opacity: .2;
+		opacity: 0;
 	}
 	.phaseName{
 		position: absolute;
-    bottom: calc(20% - 20px);
+    bottom: calc(5% - 20px);
     left: 0;
     right: 0;
 	}
-	.distance{
+	.percent{
 		opacity: .2;
 		position: absolute;
     /* bottom: calc(20% - 120px); */
@@ -86,16 +87,16 @@
 <div class="circle"></div>
 <div class="infosCenter interface">
 	<div class="phaseName ">
-		No Moon in
+		<!-- - - - - - - - -->
 	</div>
 	<div class="zodiacName ">
-		Sagitarius
+		<!-- XXXXXXXXXX -->
 	</div>
 	<div class="distance ">
-		000000KM
+		<!-- 000000 KM -->
 	</div>
 		<div class="percent ">
-			00%
+			<!-- 00% -->
 		</div>
 	<div class="bigZodiac">
 	</div>
