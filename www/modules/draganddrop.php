@@ -35,7 +35,8 @@ var prevPosition_moon =0;
 var newnextPosition_moon =0;
 var newnextPosition_moon =0;
 var currentPosition =0;
-var offcet=0;
+var offcet=new Date(new Date()).getHours() / 24;
+// console.log("TEST " + offcet);
 var currentDateOffcet =0
 var currentMonthOffcet =0
 var calculDate =0
@@ -82,18 +83,10 @@ function initDrag(){
         soundmultiplier ++
       }
       soundOffcetCompare = soundOffcet
-      // console.log(soundOffcet);
 
     }else {
       var soundOffcet = parseFloat((offcet*1).toFixed(1));
     }
-
-    // soundDragCounter = offcet.toFixed(2);
-    // console.log(soundDragCounter);
-      // if (soundDragCounter != offcet.toFixed(1)) {
-      //   soundDragCounter = offcet.toFixed(1);
-      //   soundDrag.play();
-      // }
 
       updateInfos()
       // get current positions
@@ -142,7 +135,6 @@ function initDrag(){
         // update the var DAY
         var today = new Date();
         calculDate = new Date(today.setDate(today.getDate() + currentDateOffcet));
-        // console.log("DATE : " + calculDate);
 
         var newDay = calculDate.getDate();
         var newMonth = calculDate.getMonth()+1;

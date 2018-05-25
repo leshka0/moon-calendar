@@ -16,7 +16,6 @@
 <div id="ex2">o</div>
 <div id="ex3">l</div> -->
 
-
 <script type="text/javascript">
 
 function load_moon_phases(obj){
@@ -29,7 +28,7 @@ function load_moon_phases(obj){
 	xmlhttp.onreadystatechange = function() {
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 			var moon  = JSON.parse(xmlhttp.responseText)
-			example_1(moon)
+			// example_1(moon)
 			// example_2(moon)
 			// example_3(moon)
 		}

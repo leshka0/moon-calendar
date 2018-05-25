@@ -112,12 +112,29 @@
 
 // var moon
 var currentDay = new Date(new Date());
+
+// RANGE FROM 1st JANUARY
+// var startingDay = new Date();
+// startingDay.setDate(1);
+// startingDay.setMonth(0);
+// startingDay.setYear(2018);
+//
+// var range = Math.round((new Date() - startingDay) / (1000 * 60 * 60 * 24));
+// console.log("startingDay : " + range);
+
+
 var range = 200;
 var rangeMonth = 20;
 var startingDay = new Date(new Date());
 var startingMonth = new Date(new Date());
 startingDay.setDate(currentDay.getDate() - range);
 startingMonth.setMonth(currentDay.getMonth() - rangeMonth);
+console.log("STARTING DAY : "+startingDay);
+
+var timeOffcet = startingDay.getHours() *100 / 24;
+$(".prev").css("margin-right",timeOffcet +"px");
+$(".next").css("margin-left", -timeOffcet +"px");
+console.log("timeOffcet  : "+startingMonth.getHours());
 startingDay.setHours(0);
 startingDay.setMinutes(0);
 startingMonth.setHours(0);
