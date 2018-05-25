@@ -10,6 +10,10 @@
 		  font-family: 'Aqua';
 		  src: url('fonts/aqua.ttf'); /* IE9 Compat Modes */
 		}
+		@font-face {
+		  font-family: 'TrajanPro';
+		  src: url('fonts/TrajanPro-Regular.otf'); /* IE9 Compat Modes */
+		}
 		.interface{
 			font-size: 10px;
 			color: white;
@@ -23,12 +27,13 @@
 				overflow: hidden;
 				color: #888;
 				cursor: crosshair;
+				cursor: -webkit-image-set(url(img/cursor2x.png) 1x,url(img/cursor2x.png) 2x) 50 50,default;
 			}
 			#ex1{
 				position: absolute;
 				top: 20px;
 				left: 20px;
-				opacity: 1;
+				opacity: .2;
 			}
 		</style>
 	</head>
@@ -62,6 +67,8 @@
 		<?php include("modules/load_moon_phases.php"); ?>
 		<!-- zodiac -->
 		<script type="text/javascript" src="modules/zodiac.js"></script>
+		<!-- Welcome -->
+		<?php include("modules/welcome.php"); ?>
 
 	</body>
 </html>

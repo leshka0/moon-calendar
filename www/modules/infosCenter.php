@@ -46,17 +46,20 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		position: absolute;
-		top: -11.5%;
-		bottom: -11.5%;
-		left: -11.5%;
-		right: -11.5%;
+		top: -8.5%;
+		bottom: -8.5%;
+		left: -8.5%;
+		right: -8.5%;
 		transition: opacity 3s ease;
 		/* filter: drop-shadow(0px 2px 4px #000000); */
 	}
 	.zodiacName{
+		font-family: 'TrajanPro', Arial, sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 15px;
 		font-size: 3em;
 		position: absolute;
-		bottom: -103px;
+		bottom: -106px;
 		left: 0;
 		right: 0;
 		opacity: 1;

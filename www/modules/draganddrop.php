@@ -206,7 +206,7 @@ function initDrag(){
 
   function endDrag(){
     clearInterval(velocityInterval);
-    zodiacName()
+    zodiacName();
     // detect zodiac name on the left
 
     updateInfos();
@@ -238,9 +238,9 @@ $(".bigZodiac").css("background-image", "url('img/zodiac/bigs/"+updateZodiac+".p
 // window.onload = initDrag();
 // window.onload = zodiacName();
 $( document ).ready( initDrag )
-$( document ).ready( zodiacName )
-window.addEventListener("load", function(event) {
-    zodiacName();
-});
+// $( document ).ready( zodiacName )
+// window.addEventListener("load", function(event) {
+//     zodiacName();
+// });
 
 </script>

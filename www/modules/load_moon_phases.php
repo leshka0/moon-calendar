@@ -54,9 +54,9 @@ function load_moon_phases(obj){
 	configMoon.LDZ=new Date(configMoon.year,configMoon.month-1,1)/1000
 
 }
-document.addEventListener("DOMContentLoaded",
-zodiacName()
-)
+// document.addEventListener("DOMContentLoaded",
+// zodiacName()
+// )
 window.onload = configAMoon(new Date().getMonth()+1);
 window.onload = load_moon_phases(configMoon);
 window.onload = loadNexDates(configMoon);
