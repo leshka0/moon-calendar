@@ -569,13 +569,112 @@ var zodiac5 = [
   }
 ];
 
+var zodiac6 = [
+  {
+    sign:   "leo",
+    hour:   23,
+    minute: 11,
+    day:    19,
+    month:  5,
+    year:   2018
+  },
+  {
+    sign:   "virgo",
+    hour:   02,
+    minute: 03,
+    day:    22,
+    month:  5,
+    year:   2018
+  },
+  {
+    sign:   "libra",
+    hour:   06,
+    minute: 52,
+    day:    24,
+    month:  5,
+    year:   2018
+  },
+  {
+    sign:   "scorpio",
+    hour:   13,
+    minute: 40,
+    day:    26,
+    month:  5,
+    year:   2018
+  },
+  {
+    sign:   "sagittarius",
+    hour:   22,
+    minute: 29,
+    day:    28,
+    month:  5,
+    year:   2018
+  },
+  {
+    sign:   "capricorn",
+    hour:   09,
+    minute: 27,
+    day:    31,
+    month:  5,
+    year:   2018
+  },
+  {
+    sign:   "aquarius",
+    hour:   22,
+    minute: 07,
+    day:    02,
+    month:  6,
+    year:   2018
+  },
+  {
+    sign:   "pisces",
+    hour:   10,
+    minute: 54,
+    day:    05,
+    month:  6,
+    year:   2018
+  },
+  {
+    sign:   "aries",
+    hour:   21,
+    minute: 26,
+    day:    07,
+    month:  6,
+    year:   2018
+  },
+  {
+    sign:   "taurus",
+    hour:   04,
+    minute: 04,
+    day:    10,
+    month:  6,
+    year:   2018
+  },
+  {
+    sign:   "gemini",
+    hour:   06,
+    minute: 53,
+    day:    12,
+    month:  6,
+    year:   2018
+  },
+  {
+    sign:   "cancer",
+    hour:   07,
+    minute: 20,
+    day:    14,
+    month:  6,
+    year:   2018
+  }
+];
+
 // Test
 var test = {
   sign:   "test",
   hour:   12,
   minute: 30,
-  day:    25,
-  month:  5,
+  day:    27,
+  month:  6,
   year:   2018
 };
 
