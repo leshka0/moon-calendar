@@ -37,7 +37,7 @@
 				camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 1000 );
 				camera.position.x = 0;
 				camera.position.y = 0;
-				camera.position.z = 400;
+				camera.position.z = 300;
 
 				scene = new THREE.Scene();
 
@@ -121,7 +121,7 @@
 				halo.position.set(Math.cos(lightRot)*12,0,0);
 				// console.log(halo.material.opacity);
 				renderer.render( scene, camera );
-				
+
 			}
 
 		</script>

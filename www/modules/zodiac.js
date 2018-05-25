@@ -640,8 +640,6 @@ function initZodiac() {
 			"<div class='zodiac' style='margin-left : " +
 			dist +
 			"px'>" +
-			// zodiac3[i].sign +
-			// "<img name='aquarius' class='icoZodiac' src='img/zodiac/smalls/aquarius.svg'/>" +
 			icon(zodiac5[i].sign) +
 			" </div>";
 		$(".next_zodiac").append(appendMe);
@@ -711,7 +709,7 @@ function initZodiac() {
       "<div class='zodiac' style='margin-left : " +
       dist +
       "px'>" +
-      "." +
+      icon(test.sign) +
       " </div>";
     $(".next_zodiac").append(appendMe);
     $(".prev_zodiac").append(appendMe);

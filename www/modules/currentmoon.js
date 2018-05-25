@@ -81,8 +81,6 @@ function tweenNotTheLight(lightRotTween) {
 }
 
 function text() {
-  // console.log(moon.phase[day]);
-  // day = new Date().getDate()
   dayWeek = moon.phase[day].dayWeek;
   var html = "<div class='moon'>";
   html += "<div>" + moon.nameDay[dayWeek] + "</div>";

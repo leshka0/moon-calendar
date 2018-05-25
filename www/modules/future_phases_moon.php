@@ -14,7 +14,7 @@
 	.perv_moonContainer{
 		position: absolute;
 		top: calc(46vh + 60px);
-		right: 65vw;
+		right: calc(50vw + 30vh);
 		left: -500px;
 		height: 75px;
 		overflow: scroll;
@@ -24,7 +24,7 @@
 	.next_moonContainer{
 		position: absolute;
 		top: calc(46vh + 60px);
-		left: 65vw;
+		left: calc(50vw + 30vh);
 		right: -500px;
 		height: 75px;
 		white-space: nowrap ;

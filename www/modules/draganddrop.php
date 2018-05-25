@@ -49,7 +49,7 @@ function initDrag(){
 
 
   var soundDrag = new Howl({
-    volume: 0.1,
+    volume: .8,
     src: ['sounds/drag.ogg']
     // src: ['drag.ogg', 'sound.mp3']
   });

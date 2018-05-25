@@ -14,7 +14,7 @@
 	.prevContainer{
 		position: absolute;
 		top: 46vh;
-		right: 65vw;
+		right: calc(50vw + 30vh);
 		left: -500px;
 		height: 75px;
 		overflow: scroll;
@@ -24,7 +24,7 @@
 	.nextContainer{
 		position: absolute;
 		top: 46vh;
-		left: 65vw;
+		left: calc(50vw + 30vh);
 		right: -500px;
 		height: 75px;
 		white-space: nowrap ;
@@ -42,16 +42,6 @@
 		/* letter-spacing: 4px; */
 		border-bottom: 25px solid grey;
 		border-image: url("img/ruler2x.png") 100 0 round;
-	}
-	.currentDate{
-		position: absolute;
-		top: 20vh;
-		left: 50%;
-		right: auto;
-		margin: auto;
-		display: flex;
-		justify-content: center;
-		text-align: center;
 	}
 	.currentContainer{
 		overflow: hidden;

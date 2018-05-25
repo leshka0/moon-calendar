@@ -3,11 +3,11 @@
 	 position: absolute;
 	 /* top: 25vh; */
 	 /* left: calc(50vw - (50vh / 2)); */
-	 left: 35vw;
-	 right: 35vw;
-	 top: calc(50vh - (30vw / 2));
+	 left: calc(50vw - 30vh);;
+	 right: calc(50vw - 30vh);;
+	 top: calc(50vh - 30vh);
 	 /* bottom: 0; */
-	 height: 30vw;
+	 height: 60vh;
 	 /* width: 50vh; */
 	 /* height: 50vh; */
 	 /* right: auto; */
@@ -32,11 +32,11 @@
 		justify-content: center;
 		text-align: center;
 		opacity: 1;
-		transition: all 5s ease;
+		transition: opacity 5s ease;
 	}
 	.hide{
 		opacity: 0 !important;
-		transition: all 0.8s ease !important;
+		transition: opacity 0.8s ease !important;
 	}
 	.bigZodiac{
 		/* opacity: .7; */
@@ -46,21 +46,21 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		position: absolute;
-		top: 0%;
-		bottom: 0%;
-		left: 0%;
-		right: 0%;
+		top: -11.5%;
+		bottom: -11.5%;
+		left: -11.5%;
+		right: -11.5%;
 		transition: opacity 3s ease;
 		/* filter: drop-shadow(0px 2px 4px #000000); */
 	}
 	.zodiacName{
 		font-size: 3em;
 		position: absolute;
-		bottom: calc(5% - 60px);
+		bottom: -103px;
 		left: 0;
 		right: 0;
 		opacity: 1;
-		transition: all 2s ease;
+		transition: opacity 2s ease;
 	}
 	.distance{
 		position: absolute;
@@ -71,7 +71,7 @@
 	}
 	.phaseName{
 		position: absolute;
-    bottom: calc(5% - 20px);
+    bottom: -62px;
     left: 0;
     right: 0;
 	}
@@ -79,9 +79,19 @@
 		opacity: .2;
 		position: absolute;
     /* bottom: calc(20% - 120px); */
-		top: -20px;
+		top: -65px;
     left: 0;
     right: 0;
+	}
+	.currentDate{
+		position: absolute;
+		top: calc(20vh - 56px);
+		left: 50%;
+		right: auto;
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		text-align: center;
 	}
 </style>
 <div class="circle"></div>

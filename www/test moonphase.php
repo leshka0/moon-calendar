@@ -12,9 +12,9 @@
 		</style>
 	</head>
 	<body>
-<div id="ex1">l</div>
+<!-- <div id="ex1">l</div>
 <div id="ex2">o</div>
-<div id="ex3">l</div>
+<div id="ex3">l</div> -->
 
 
 <script type="text/javascript">
@@ -67,7 +67,7 @@ function example_1(moon){
 	html+="<div>"+moon.phase[day].phaseName + " "+ Math.round(moon.phase[day].lighting)+"%</div>"
 	html+="</div>"
 	console.log(moon.phase[day].lighting);
-	document.getElementById("ex1").innerHTML=html
+	// document.getElementById("ex1").innerHTML=html
 }
 </script>
 
