@@ -20,6 +20,7 @@
 		overflow: scroll;
 		white-space: nowrap ;
 		overflow: hidden;
+		transition: all 2s ease;
 	}
 	.nextContainer{
 		position: absolute;
@@ -29,6 +30,7 @@
 		height: 75px;
 		white-space: nowrap ;
 		overflow: hidden;
+		transition: all 2s ease;
 	}
 	.date{
 		text-align: center;
@@ -67,7 +69,6 @@
 	}
 	.currentDateNumbr{
 		text-align: right;
-		color: white;
 		display: inline-block;
 		width: 19px;
 		height: 20px;
@@ -76,7 +77,6 @@
 	}
 	.monthNumbr{
 			text-align: left;
-			color: white;
 			display: inline-block;
 			width: 36px;
 			height: 20px;

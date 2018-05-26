@@ -94,7 +94,7 @@ function text() {
     "%</div>";
   html += "</div>";
   // console.log(moon.phase[day].lighting);
-  document.getElementById("ex1").innerHTML = html;
+  // document.getElementById("ex1").innerHTML = html;
 }
 
 function start(moon) {

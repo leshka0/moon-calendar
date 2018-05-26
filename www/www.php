@@ -69,6 +69,9 @@
 		<script type="text/javascript" src="modules/zodiac.js"></script>
 		<!-- Welcome -->
 		<?php include("modules/welcome.php"); ?>
+		<!-- more infos -->
+		<?php include("modules/card.php"); ?>
+		<!-- <script type="text/javascript" src="modules/moreInfos.js"></script> -->
 
 	</body>
 </html>

@@ -1,6 +1,7 @@
 <!-- CSS -->
 <style>
   .dragme {
+    z-index: 10;
     position: fixed;
     top: 20vh;
     left:0;
@@ -10,6 +11,7 @@
     /* background-color: rgba(255, 255, 50, 0.05); */
   }
   .dropme {
+    z-index: 10;
     top: 0;
     left:0;
     right: 0;
@@ -232,6 +234,7 @@ console.log("THE SIGN IS : "+updateZodiac);
 // console.log("zodiacPosition IS : "+zodiacPosition);w
 $(".zodiacName").html(updateZodiac)
 $(".bigZodiac").css("background-image", "url('img/zodiac/bigs/"+updateZodiac+".png')")
+$(".bigZodiac").css("background-image", "url('img/zodiac/whites/"+updateZodiac+".png')")
 
 }
 

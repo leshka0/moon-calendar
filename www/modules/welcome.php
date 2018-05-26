@@ -42,7 +42,7 @@
 	$(".enterBtn").click(function() {
   	$(".welcome").addClass("welcomeDisapear");
 		// $(".infosCenter").css("opacity",0)
-		hideInfos()
+		hideInfos();
 		setTimeout(function(){
 		  zodiacName();
 			updateInfos();

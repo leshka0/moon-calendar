@@ -20,6 +20,7 @@
 		overflow: scroll;
 		white-space: nowrap ;
 		overflow: hidden;
+		transition: all 2s ease;
 	}
 	.next_moonContainer{
 		position: absolute;
@@ -29,6 +30,7 @@
 		height: 75px;
 		white-space: nowrap ;
 		overflow: hidden;
+		transition: all 2s ease;
 	}
 	.date_moon{
 		text-align: center;
