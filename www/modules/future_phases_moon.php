@@ -57,7 +57,7 @@
 		left: 0;
 	}
 	.icoZodiac{
-		/* margin-left: -15px; */
+		/* margin-left: 12px; */
 		width: 30px;
 		height: 30px;
 		/* background-color: #322 */

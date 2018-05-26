@@ -26,6 +26,8 @@ function checkTime(x) {
 
 function timeFromBeggining(x) {
   var date = new Date();
+	// var offcetZodiac=new Date(new Date()).getHours() / 24;
+	offcetZodiac = 0 - 0.61;
   var hours = x.hour;
   var minutes = x.minute;
   var day = x.day;
@@ -36,7 +38,7 @@ function timeFromBeggining(x) {
   date.setDate(day);
   date.setMonth(month - 1);
   date.setYear(year);
-  var daydiff = (date - d) / (1000 * 60 * 60 * 24);
+  var daydiff = (date - d) / (1000 * 60 * 60 * 24) + offcetZodiac;
   // console.log(daydiff.toFixed(4));
 	// console.log(x.minute);
   return daydiff.toFixed(4);
@@ -669,14 +671,14 @@ var zodiac6 = [
 ];
 
 // Test
-var test = {
-  sign:   "test",
-  hour:   12,
-  minute: 30,
-  day:    27,
-  month:  6,
-  year:   2018
-};
+// var test = {
+//   sign:   "test",
+//   hour:   12,
+//   minute: 00,
+//   day:    27,
+//   month:  5,
+//   year:   2018
+// };
 
 // var zodiacQuantity = 12;
 
@@ -698,7 +700,7 @@ function initZodiac() {
   }
 	for (var i = 0; i < zodiac2.length; i++) {
     var testTime = zodiac2[i];
-    var dist = timeFromBeggining(testTime) * 100 + 13;
+    var dist = timeFromBeggining(testTime) * 100;
     var appendMe =
       "<div class='zodiac' style='margin-left : " +
       dist +
@@ -710,7 +712,7 @@ function initZodiac() {
   }
 	for (var i = 0; i < zodiac3.length; i++) {
     var testTime = zodiac3[i];
-    var dist = timeFromBeggining(testTime) * 100 + 13;
+    var dist = timeFromBeggining(testTime) * 100;
     var appendMe =
       "<div class='zodiac' style='margin-left : " +
       dist +
@@ -722,7 +724,7 @@ function initZodiac() {
   }
 	for (var i = 0; i < zodiac4.length; i++) {
     var testTime = zodiac4[i];
-    var dist = timeFromBeggining(testTime) * 100 + 13;
+    var dist = timeFromBeggining(testTime) * 100;
     var appendMe =
       "<div class='zodiac' style='margin-left : " +
       dist +
@@ -734,12 +736,25 @@ function initZodiac() {
   }
 	for (var i = 0; i < zodiac5.length; i++) {
 		var testTime = zodiac5[i];
-		var dist = timeFromBeggining(testTime) * 100 + 13;
+		var dist = timeFromBeggining(testTime) * 100;
 		var appendMe =
 			"<div class='zodiac' style='margin-left : " +
 			dist +
 			"px'>" +
 			icon(zodiac5[i].sign) +
+			" </div>";
+		$(".next_zodiac").append(appendMe);
+		$(".prev_zodiac").append(appendMe);
+	}
+
+	for (var i = 0; i < zodiac6.length; i++) {
+		var testTime = zodiac6[i];
+		var dist = timeFromBeggining(testTime) * 100;
+		var appendMe =
+			"<div class='zodiac' style='margin-left : " +
+			dist +
+			"px'>" +
+			icon(zodiac6[i].sign) +
 			" </div>";
 		$(".next_zodiac").append(appendMe);
 		$(".prev_zodiac").append(appendMe);
@@ -802,16 +817,16 @@ function initZodiac() {
 		}
 	}
 		// TEST
-    var testTime = test
-    var dist = timeFromBeggining(testTime) * 100 + 30;
-    var appendMe =
-      "<div class='zodiac' style='margin-left : " +
-      dist +
-      "px'>" +
-      icon(test.sign) +
-      " </div>";
-    $(".next_zodiac").append(appendMe);
-    $(".prev_zodiac").append(appendMe);
+    // var testTime = test
+    // var dist = timeFromBeggining(testTime) * 100;
+    // var appendMe =
+    //   "<div class='zodiac' style='margin-left : " +
+    //   dist +
+    //   "px'>" +
+    //   icon(test.sign) +
+    //   " </div>";
+    // $(".next_zodiac").append(appendMe);
+    // $(".prev_zodiac").append(appendMe);
 
 }
 
