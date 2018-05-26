@@ -14,10 +14,15 @@
 		  font-family: 'TrajanPro';
 		  src: url('fonts/TrajanPro-Regular.otf'); /* IE9 Compat Modes */
 		}
+		@font-face {
+		  font-family: 'AndaleMono';
+		  src: url('fonts/AndaleMono.ttf'); /* IE9 Compat Modes */
+		}
+
 		.interface{
 			font-size: 10px;
 			color: white;
-			font-family: 'Aqua', Arial, sans-serif;
+			font-family: 'AndaleMono', Arial, sans-serif;
 			text-transform: uppercase;
 			letter-spacing: 5px;
 		}

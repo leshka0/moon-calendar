@@ -57,13 +57,13 @@
 	}
 	.current{
 		/* background-color: red; */
-		transition: all .2s ease;
+		transition: margin-top .2s ease;
 		width: 19px;
 		height: 10px;
 	}
 	.month{
 		/* background-color: red; */
-		transition: all .2s ease;
+		transition: margin-top .2s ease;
 		width: 36px;
 		height: 10px;
 	}

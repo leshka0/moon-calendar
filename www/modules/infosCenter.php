@@ -43,7 +43,7 @@
 		bottom: -8.5%;
 		left: -8.5%;
 		right: -8.5%;
-		transition: all 3s ease, background-image .2s ease;
+		transition: all 3s ease, background-image .2s ease, top 2s ease, bottom 2s ease;
 	}
 	.bigZodiacWhite{
 		z-index: 1;
@@ -57,7 +57,7 @@
 		left: -8.5%;
 		right: -8.5%;
 		opacity: 0;
-		transition: all 3s ease, background-image .2s ease;
+		transition: all 3s ease, background-image .2s ease, top 2s ease, bottom 2s ease;
 	}
 
 	.zodiacName{
@@ -82,6 +82,7 @@
 		opacity: 0;
 	}
 	.phaseName{
+		z-index: 1;
 		position: absolute;
     bottom: -62px;
     left: 0;
@@ -107,6 +108,7 @@
 		display: flex;
 		justify-content: center;
 		text-align: center;
+	  transition: color 2s ease, top 2s ease;
 	}
 
 </style>
