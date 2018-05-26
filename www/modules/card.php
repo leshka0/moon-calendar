@@ -12,7 +12,6 @@
 .bigZodiacCardOn{
   top: 30px;
   bottom: 60px;
-  transition: all 2s ease;
 }
 .card{
   z-index:

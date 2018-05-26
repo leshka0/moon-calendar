@@ -234,7 +234,7 @@ console.log("THE SIGN IS : "+updateZodiac);
 // console.log("zodiacPosition IS : "+zodiacPosition);w
 $(".zodiacName").html(updateZodiac)
 $(".bigZodiac").css("background-image", "url('img/zodiac/bigs/"+updateZodiac+".png')")
-$(".bigZodiac").css("background-image", "url('img/zodiac/whites/"+updateZodiac+".png')")
+$(".bigZodiacWhite").css("background-image", "url('img/zodiac/whites/"+updateZodiac+".png')")
 
 }
 

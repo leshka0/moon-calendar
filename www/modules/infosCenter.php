@@ -139,6 +139,7 @@
 function hideInfos() {
 	$(".zodiacName").addClass("hide");
 	$(".bigZodiac").addClass("hide");
+	$(".bigZodiacWhite").addClass("hide");
 	// console.log("hide");
 	// $(".infosCenter").addClass("hide");
 }
