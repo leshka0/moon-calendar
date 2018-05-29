@@ -5,6 +5,7 @@
   bottom: 60px;
 }
 .card{
+  width: calc(100% - 200px);
   font-size: 15px;
   font-family: 'AndaleMono', Arial, sans-serif;
   text-transform: initial;
@@ -13,16 +14,18 @@
   /* z-index:1; */
   position: absolute;
   top: 0px;
-  min-height: 1024px;
+  /* min-height: 1024px; */
   /* width: 100%; */
-  background-color: white;
+  background-color: #f6f1ee;
   padding-top: 58vh;
   padding-left: 100px;
   padding-right: 100px;
+  padding-bottom: 100px;
+  margin-bottom: 100px;
   text-align: left;
   color: black;
   opacity: 0;
-  transition: opacity 2s ease;
+  transition: opacity 1s cubic-bezier(.5,0,.01,1);
   pointer-events: none;
 }
 .cardCardOn{
@@ -44,7 +47,7 @@
 }
 .currentDateCardOn{
   color: black;
-  top: 40px;
+  top: 20px;
 }
 .nextContainerCardOn{
   left: 75vw;
@@ -60,6 +63,7 @@ var cardOn = false;
 $(".zodiacName").click(function() {
   if (cardOn == false){
     cardOn = true;
+    $(".dragme").css("z-index",0);
     $(".zodiacName").addClass("zodiacNameCardOn");
     $(".phaseName").addClass("phaseNameCardOn");
     $(".bigZodiacWhite").css("opacity",1);
@@ -81,6 +85,7 @@ $(".zodiacName").click(function() {
   $(".dragme").click(function() {
     if (cardOn == true){
       cardOn = false;
+      $(".dragme").css("z-index",10);
       $(".zodiacName").removeClass("zodiacNameCardOn");
       $(".phaseName").removeClass("phaseNameCardOn");
       $(".bigZodiacWhite").css("opacity",0);
@@ -96,6 +101,7 @@ $(".zodiacName").click(function() {
       $(".next_moonContainer").removeClass("nextContainerCardOn");
       $(".perv_moonContainer").removeClass("pervContainerCardOn");
 
+      $(".card").html("")
     }
 
 })

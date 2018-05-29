@@ -20,7 +20,7 @@
 		overflow: scroll;
 		white-space: nowrap ;
 		overflow: hidden;
-		transition: all 2s ease;
+		transition: all 1s cubic-bezier(.5,0,.01,1);
 	}
 	.nextContainer{
 		position: absolute;
@@ -30,7 +30,7 @@
 		height: 75px;
 		white-space: nowrap ;
 		overflow: hidden;
-		transition: all 2s ease;
+		transition: all 1s cubic-bezier(.5,0,.01,1);
 	}
 	.date{
 		text-align: center;
@@ -93,7 +93,7 @@
 	<div class="prev interface">
 	</div>
 </div>
-<div class="currentDate interface">
+<!-- <div class="currentDate interface">
 	<div style="display: flex; justify-content: center; margin-left:-100%;">
 		<div class="currentContainer">
 			<div class="current">
@@ -106,7 +106,7 @@
 		</div>
 		&nbsp;2018
 	</div>
-</div>
+</div> -->
 
 <script type="text/javascript">
 
