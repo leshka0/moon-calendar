@@ -16,21 +16,24 @@
   top: 0px;
   /* min-height: 1024px; */
   /* width: 100%; */
-  background-color: #f6f1ee;
+  background-color: transparent;
   padding-top: 58vh;
   padding-left: 100px;
   padding-right: 100px;
-  padding-bottom: 100px;
-  margin-bottom: 100px;
   text-align: left;
   color: black;
-  opacity: 0;
-  transition: opacity 1s cubic-bezier(.5,0,.01,1);
+  /* opacity: 0; */
+  transition: all 1s cubic-bezier(.5,0,.01,1);
+  /* transition: background-color 1s cubic-bezier(.5,0,.01,1); */
+   /* opacity 1s cubic-bezier(.5,0,.01,1), */
   pointer-events: none;
 }
 .cardCardOn{
   opacity: 1;
+  background-color: #f6f1ee;
   pointer-events: all;
+  padding-bottom: 50px;
+  margin-bottom: 100px;
 }
 .zodiacNameCardOn{
   bottom: -20px;
@@ -101,10 +104,14 @@ $(".zodiacName").click(function() {
       $(".next_moonContainer").removeClass("nextContainerCardOn");
       $(".perv_moonContainer").removeClass("pervContainerCardOn");
 
-      $(".card").html("")
+      //ScrollUp
+      $('.infosCenterWrapper').animate({
+        scrollTop: 0
+      }, 800, function(){
+        $(".card").html("")
+      });
+
     }
 
 })
-// function toggleCard(){
-// }
 </script>
