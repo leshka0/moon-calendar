@@ -35,7 +35,8 @@
     left: 25vw;
     bottom: 0;
     right: 25vw;
-    overflow: scroll;
+    overflow-y: scroll;
+		overflow-x: hidden;
 	}
 	.hide{
 		opacity: 0 !important;

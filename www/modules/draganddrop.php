@@ -64,10 +64,12 @@ function initDrag(){
 
   // CLICK
   $(".dragme").mousedown(function(e) {
-    isDrag = true;
-    originX = e.pageX;
-    $(".dragme").addClass("dropme");
-    hideInfos();
+    if (!cardOn) {
+      isDrag = true;
+      originX = e.pageX;
+      $(".dragme").addClass("dropme");
+      hideInfos();
+    }
   });
 
   // DRAG
@@ -178,7 +180,7 @@ function initDrag(){
   }
 
   $(".dragme").mousemove(function(e) {
-    if (isDrag) {
+    if (isDrag && !cardOn) {
       // calculate the dragged distance
       differenceX = e.pageX - originX;
       upDate(e);
