@@ -77,9 +77,5 @@
 		<!-- more infos -->
 		<?php include("modules/card.php"); ?>
 		<!-- <script type="text/javascript" src="modules/moreInfos.js"></script> -->
-    <script>
-    var scroll = new Smooth({ native: true, preload: true });
-    scroll.init();
-    </script>
 	</body>
 </html>
