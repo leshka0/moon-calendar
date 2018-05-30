@@ -4,6 +4,13 @@
   top: 30px;
   bottom: 60px;
 }
+.bulletPoints{
+    font-size: 10px;
+    font-family: 'AndaleMono', Arial, sans-serif;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 60px;
+}
 .credits{
   font-size: 10px;
   text-align: center;
@@ -78,7 +85,69 @@
 <script type="text/javascript">
 var cardOn = false;
 
+
+    // LOAD ZODIAC SIGN TXT FILE
+    function load(updateZodiac){
+    switch (updateZodiac) {
+        case "leo":
+  				data = "texts/leo.txt"
+  				return data
+  	   break;
+  			case "virgo":
+  				data = "texts/virgo.txt"
+  				return data
+  	   break;
+  			case "libra":
+  				data = "texts/libra.txt"
+  				return data
+  	   break;
+  			case "scorpio":
+  				data = "texts/scorpio.txt"
+  				return data
+  	   break;
+  			case "sagittarius":
+  				data = "texts/sagittarius.txt"
+  				return data
+  	   break;
+  			case "capricorn":
+  				data = "texts/capricorn.txt"
+  				return data
+  	   break;
+  			case "aquarius":
+  				data = "texts/aquarius.txt"
+  				return data
+  	   break;
+  			case "pisces":
+  				data = "texts/pisces.txt"
+  				return data
+  	   break;
+  			case "aries":
+  				data = "texts/aries.txt"
+  				return data
+  	   break;
+  			case "taurus":
+  				data = "texts/taurus.txt"
+  				return data
+  	   break;
+  			case "gemini":
+  				data = "texts/gemini.txt"
+  				return data
+  	   break;
+  			case "cancer":
+  				data = "texts/cancer.txt"
+  				return data
+        break;
+      default:
+        data = "texts/default.txt"
+        return data
+      }
+    }
+
+// OPEN CARD
+
 $(".zodiacName").click(function() {
+
+
   if (cardOn == false){
     cardOn = true;
     $(".dragme").css("z-index",0);
@@ -97,9 +166,17 @@ $(".zodiacName").click(function() {
     $(".next_moonContainer").addClass("nextContainerCardOn");
     $(".perv_moonContainer").addClass("pervContainerCardOn");
 
-    $(".card").append("<p>Endings come in big and small ways. All shapes and sizes. Carrying with them all kinds of consequences. Information for us to unpack. Confirmations about what we need next. <br/><br/> Some growth cycles are complete before we are ready to move on. Accepting the fact that something has played out its potential is key to letting ourselves grieve if there is grief, heal if there is healing to be done, and eventually move on with the lessons that we are left with.<br/><br/> How we approach each completion, how we arrive at each milestone, and how we handle each ending is a deeply personal endeavor. Unique to each situation. Unique to our constitution at that moment. Unique to the phase of life we find ourselves in. Each ending is an opportunity to meet difficulty with graciousness. Towards ourselves. Towards the situation. Towards those that we struggle with.</p>")
+    // $(".card").append("<p>Endings come in big and small ways. All shapes and sizes. Carrying with them all kinds of consequences. Information for us to unpack. Confirmations about what we need next. <br/><br/> Some growth cycles are complete before we are ready to move on. Accepting the fact that something has played out its potential is key to letting ourselves grieve if there is grief, heal if there is healing to be done, and eventually move on with the lessons that we are left with.<br/><br/> How we approach each completion, how we arrive at each milestone, and how we handle each ending is a deeply personal endeavor. Unique to each situation. Unique to our constitution at that moment. Unique to the phase of life we find ourselves in. Each ending is an opportunity to meet difficulty with graciousness. Towards ourselves. Towards the situation. Towards those that we struggle with.</p>")
+    // $(".card").load("texts/aries_normal.txt");
 
-    $(".card").append("<div class='credits'>illustration by <a href='http://terryemi.com/en/eshop/' target='_blank'>Terryemi</a><br/>Text by <a href='http://velvet-venus.com' target='_blank'>Velvet-Venus</a></div>")
+    $.ajax({
+            url : load(updateZodiac),
+            dataType: "text",
+            success : function (data) {
+                $(".card").html(data);
+            }
+        });
+    // $(".card").append("<div class='credits'>illustration by <a href='http://terryemi.com/en/eshop/' target='_blank'>Terryemi</a><br/>Text by <a href='http://velvet-venus.com' target='_blank'>Velvet-Venus</a></div>")
   }
 })
   $(".dragme").click(function() {
