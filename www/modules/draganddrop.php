@@ -142,7 +142,8 @@ function initDrag(){
 
         var newDay = calculDate.getDate();
         var newMonth = calculDate.getMonth()+1;
-
+        console.log("NEW MONTH : "+ month);
+        console.log("NEW MONTH : "+ newMonth);
         // ONLY IF MONTH IS DIFFERENT
         if (month != newMonth) {
           // change date top

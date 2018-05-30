@@ -833,8 +833,8 @@ function initZodiac() {
 window.onload = initZodiac();
 
 // test time from beggining
-var testTime = test;
-timeFromBeggining(testTime);
+// var testTime = test;
+// timeFromBeggining(testTime);
 
 // compare 2 times
 // var compareA = leo1;

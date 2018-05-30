@@ -124,13 +124,16 @@ var currentDay = new Date(new Date());
 
 
 var range = 200;
-var rangeMonth = 20;
+var rangeMonth = 3;
 var startingDay = new Date(new Date());
 var startingMonth = new Date(new Date());
 startingDay.setDate(currentDay.getDate() - range);
+
+// HERE
+startingMonth.setDate(1);
 startingMonth.setMonth(currentDay.getMonth() - rangeMonth);
 console.log("STARTING DAY : "+startingDay);
-
+console.log("STARTING MONTH 1 : "+startingMonth);
 var timeOffcet = startingDay.getHours() *100 / 24;
 $(".prev").css("margin-right",timeOffcet +"px");
 $(".next").css("margin-left", -timeOffcet +"px");
@@ -206,8 +209,12 @@ function loadNexDates(configMoon){
 		}
 	}
 	for (var i = -rangeMonth; i < rangeMonth - 1; i++) {
+		console.log(nextMonth);
 		nextMonth.setMonth( nextMonth.getMonth( ) + 1 );
+		console.log(nextMonth);
 		$(".month").append("<div class='monthNumbr'>" + monthNames(nextMonth.getMonth()+1) + "</div>");
+		console.log("LOL");
+		console.log(monthNames(nextMonth.getMonth()+1));
 	}
 
 	$(".next").css("left",-range*100 + 50 + "px");

@@ -93,8 +93,8 @@ function text() {
     Math.round(moon.phase[day].lighting) +
     "%</div>";
   html += "</div>";
-  // console.log(moon.phase[day].lighting);
-  // document.getElementById("ex1").innerHTML = html;
+  console.log(moon.phase[day].lighting);
+  document.getElementById("ex1").innerHTML = html;
 }
 
 function start(moon) {
