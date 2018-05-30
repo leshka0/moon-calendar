@@ -4,6 +4,21 @@
   top: 30px;
   bottom: 60px;
 }
+.credits{
+  font-size: 10px;
+  text-align: center;
+  font-family: 'AndaleMono', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+.credits a{
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 4px;
+  cursor: pointer;
+}
 .card{
   width: calc(100% - 200px);
   font-size: 15px;
@@ -83,8 +98,10 @@ $(".zodiacName").click(function() {
     $(".perv_moonContainer").addClass("pervContainerCardOn");
 
     $(".card").append("<p>Endings come in big and small ways. All shapes and sizes. Carrying with them all kinds of consequences. Information for us to unpack. Confirmations about what we need next. <br/><br/> Some growth cycles are complete before we are ready to move on. Accepting the fact that something has played out its potential is key to letting ourselves grieve if there is grief, heal if there is healing to be done, and eventually move on with the lessons that we are left with.<br/><br/> How we approach each completion, how we arrive at each milestone, and how we handle each ending is a deeply personal endeavor. Unique to each situation. Unique to our constitution at that moment. Unique to the phase of life we find ourselves in. Each ending is an opportunity to meet difficulty with graciousness. Towards ourselves. Towards the situation. Towards those that we struggle with.</p>")
+
+    $(".card").append("<div class='credits'>illustration by <a href='http://terryemi.com/en/eshop/' target='_blank'>Terryemi</a><br/>Text by <a href='http://velvet-venus.com' target='_blank'>Velvet-Venus</a></div>")
   }
-  })
+})
   $(".dragme").click(function() {
     if (cardOn == true){
       cardOn = false;

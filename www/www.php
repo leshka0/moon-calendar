@@ -19,6 +19,16 @@
 		  src: url('fonts/AndaleMono.ttf'); /* IE9 Compat Modes */
 		}
 
+		::-moz-selection {
+	    color: white;
+	    background: black;
+		}
+
+		::selection {
+		    color: white;
+		    background: black;
+		}
+
 		.interface{
 			font-size: 10px;
 			color: white;

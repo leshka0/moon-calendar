@@ -124,7 +124,7 @@ var currentDay = new Date(new Date());
 
 
 var range = 200;
-var rangeMonth = 3;
+var rangeMonth = 20;
 var startingDay = new Date(new Date());
 var startingMonth = new Date(new Date());
 startingDay.setDate(currentDay.getDate() - range);

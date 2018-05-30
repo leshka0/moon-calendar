@@ -25,8 +25,3 @@ $(".zodiacName").click(function() {
   }
 
 })
-
-function toggleCard(){
-
-}
-console.log("LOOOOOOOL");
