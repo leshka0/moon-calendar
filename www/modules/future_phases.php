@@ -129,15 +129,15 @@ var startingDay = new Date(new Date());
 var startingMonth = new Date(new Date());
 startingDay.setDate(currentDay.getDate() - range);
 
-// HERE
+// correct the 30th february bug
 startingMonth.setDate(1);
 startingMonth.setMonth(currentDay.getMonth() - rangeMonth);
-console.log("STARTING DAY : "+startingDay);
-console.log("STARTING MONTH 1 : "+startingMonth);
+// console.log("STARTING DAY : "+startingDay);
+// console.log("STARTING MONTH 1 : "+startingMonth);
 var timeOffcet = startingDay.getHours() *100 / 24;
 $(".prev").css("margin-right",timeOffcet +"px");
 $(".next").css("margin-left", -timeOffcet +"px");
-console.log("timeOffcet  : "+startingMonth.getHours());
+// console.log("timeOffcet  : "+startingMonth.getHours());
 startingDay.setHours(0);
 startingDay.setMinutes(0);
 startingMonth.setHours(0);
@@ -147,8 +147,8 @@ var nextDay = new Date(startingDay);
 var prevDay = new Date(startingDay);
 var nextMonth = new Date(startingMonth);
 // console.log("CURRENT : "+currentDay);
-console.log("STARTING DAY : "+startingDay);
-console.log("STARTING MONTH : "+nextMonth);
+// console.log("STARTING DAY : "+startingDay);
+// console.log("STARTING MONTH : "+nextMonth);
 
 function monthNames(x){
 	switch (x) {
@@ -209,12 +209,10 @@ function loadNexDates(configMoon){
 		}
 	}
 	for (var i = -rangeMonth; i < rangeMonth - 1; i++) {
-		console.log(nextMonth);
 		nextMonth.setMonth( nextMonth.getMonth( ) + 1 );
 		console.log(nextMonth);
 		$(".month").append("<div class='monthNumbr'>" + monthNames(nextMonth.getMonth()+1) + "</div>");
-		console.log("LOL");
-		console.log(monthNames(nextMonth.getMonth()+1));
+
 	}
 
 	$(".next").css("left",-range*100 + 50 + "px");

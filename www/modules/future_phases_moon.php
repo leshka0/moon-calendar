@@ -107,7 +107,7 @@ function loadNexDates_moon(configMoon){
 	for (var i = 0; i < (range_moon*2)-1; i++) {
 		prevDay = day
 		nextDay_moon.setDate(nextDay_moon.getDate() + 1);
-		day = nextDay_moon.getDate();
+		var day = nextDay_moon.getDate();
 
 		// FULLMOON VALUES FOR 2018
 		if (i+1 == 1 || i+1 == 30 || i+1 == 60 || i+1 == 89 || i+1 == 119 || i+1 == 148 || i+1 == 178 || i+1 == 207 || i+1 == 237 || i+1 == 267 || i+1 == 296 || i+1 == 326 || i+1 == 355)  {
