@@ -51,6 +51,7 @@
   pointer-events: none;
 }
 .cardCardOn{
+  z-index: 1;
   opacity: 1;
   background-color: #f6f1ee;
   pointer-events: all;
@@ -80,6 +81,10 @@
 .pervContainerCardOn{
   right: 75vw;
 }
+.cursorCross{
+  cursor: -webkit-image-set(url(img/cursorX2x.png) 1x,url(img/cursorX2x.png) 2x) 50 50,default;
+}
+
 </style>
 
 <script type="text/javascript">
@@ -151,6 +156,7 @@ $(".zodiacName").click(function() {
   if (cardOn == false){
     cardOn = true;
     $(".dragme").css("z-index",0);
+    $(".dragme").addClass("cursorCross");
     $(".zodiacName").addClass("zodiacNameCardOn");
     $(".phaseName").addClass("phaseNameCardOn");
     $(".bigZodiacWhite").css("opacity",1);
@@ -183,6 +189,7 @@ $(".zodiacName").click(function() {
     if (cardOn == true){
       cardOn = false;
       $(".dragme").css("z-index",10);
+      $(".dragme").removeClass("cursorCross");
       $(".zodiacName").removeClass("zodiacNameCardOn");
       $(".phaseName").removeClass("phaseNameCardOn");
       $(".bigZodiacWhite").css("opacity",0);

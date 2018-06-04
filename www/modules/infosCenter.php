@@ -29,7 +29,7 @@
 		transition: all 1s cubic-bezier(.5,0,.01,1) .3s, opacity 5s cubic-bezier(.5,0,.01,1);
 	}
 	.infosCenterWrapper{
-		z-index: 1;
+		/* z-index: 1; */
 		position: absolute;
     top: 0;
     left: 25vw;
@@ -43,7 +43,7 @@
 		transition: opacity 0.8s ease !important;
 	}
 	.bigZodiac{
-		z-index: 1;
+		z-index: 2;
 		background-image: url("img/zodiac/bigs/default.png");
 		background-position: center;
 		background-size: contain;
@@ -56,7 +56,7 @@
 		transition: all 3s cubic-bezier(.5,0,.01,1), background-image .2s ease, top 1s cubic-bezier(.5,0,.01,1), bottom 1s cubic-bezier(.5,0,.01,1);
 	}
 	.bigZodiacWhite{
-		z-index: 1;
+		z-index: 2;
 		background-image: url("img/zodiac/whites/default.png");
 		background-position: center;
 		background-size: contain;
@@ -71,7 +71,7 @@
 	}
 
 	.zodiacName{
-		z-index: 1;
+		z-index: 11;
 		font-family: 'TrajanPro', Arial, sans-serif;
 		text-transform: uppercase;
 		letter-spacing: 15px;

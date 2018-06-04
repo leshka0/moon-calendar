@@ -3,10 +3,10 @@
   .dragme {
     z-index: 10;
     position: fixed;
-    top: 20vh;
+    top: 0vh;
     left:0;
     right: 0;
-    bottom: 20vh;
+    bottom: 0vh;
     cursor: grab;
     /* background-color: rgba(255, 255, 50, 0.05); */
   }
