@@ -6,7 +6,7 @@
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	background-color: rgba(19,19,19,.8);
+	background-color: rgba(19,19,19,.95);
 	color:yellow;
 	text-align: center;
 	z-index: 20;
@@ -24,11 +24,19 @@
 	pointer-events: none;
 }
 .welcomeMsg{
-	background: tomato;
-	height: 200px;
-	width: 200px;
+	/* background: tomato; */
+	height: 600px;
+	width: 400px;
+	background-image:
+		-webkit-image-set(url(img/welcome/t-l.png) 1x, url(img/welcome/t-l.png) 2x ),
+		-webkit-image-set(url(img/welcome/t-r.png) 1x, url(img/welcome/t-r.png) 2x ),
+		-webkit-image-set(url(img/welcome/b-l.png) 1x, url(img/welcome/b-l.png) 2x ),
+		-webkit-image-set(url(img/welcome/b-r.png) 1x, url(img/welcome/b-r.png) 2x );
+
+	background-position: left top, right top, left bottom, right bottom;
+  background-repeat: no-repeat;
+
 }
-/* $(".bigZodiac").css("background-image", "url('img/zodiac/bigs/"+updateZodiac+".png')") */
 
 </style>
 
