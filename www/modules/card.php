@@ -33,11 +33,8 @@
   text-transform: initial;
   letter-spacing: 0.3px;
   line-height: 1.5em;
-  /* z-index:1; */
   position: absolute;
   top: 0px;
-  /* min-height: 1024px; */
-  /* width: 100%; */
   background-color: transparent;
   padding-top: 58vh;
   padding-left: 100px;
