@@ -161,6 +161,9 @@
 		<div class="bigZodiacWhite">
 		</div>
 		<div class="card">
+			<p class='bulletPoints'></p>
+			<p class='description'></p>
+			<div class='credits'></div>
 		</div>
 	</div>
 </div>

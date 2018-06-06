@@ -10,6 +10,12 @@
     text-transform: uppercase;
     color: #888;
     margin-bottom: 60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.bulletPoints .underline{
+  border-bottom: 1px solid #888;
+  padding-bottom: 4px;
 }
 .credits{
   font-size: 10px;
@@ -19,6 +25,8 @@
   letter-spacing: 5px;
   margin-top: 70px;
   margin-bottom: 20px;
+  opacity: 0;
+  transition: opacity 1s;
 }
 .credits a{
   text-decoration: none;
@@ -32,6 +40,14 @@
 .credits a:hover{
   color: #be9638;
   border-color: #be9638;
+}
+
+.description{
+  opacity: 0;
+  transition: opacity 1s;
+}
+.appear{
+  opacity: 1;
 }
 .card{
   width: calc(100% - 200px);
@@ -99,55 +115,55 @@ var cardOn = false;
     function load(updateZodiac){
     switch (updateZodiac) {
         case "leo":
-  				data = "texts/leo.txt"
+  				data = "leo.txt"
   				return data
   	   break;
   			case "virgo":
-  				data = "texts/virgo.txt"
+  				data = "virgo.txt"
   				return data
   	   break;
   			case "libra":
-  				data = "texts/libra.txt"
+  				data = "libra.txt"
   				return data
   	   break;
   			case "scorpio":
-  				data = "texts/scorpio.txt"
+  				data = "scorpio.txt"
   				return data
   	   break;
   			case "sagittarius":
-  				data = "texts/sagittarius.txt"
+  				data = "sagittarius.txt"
   				return data
   	   break;
   			case "capricorn":
-  				data = "texts/capricorn.txt"
+  				data = "capricorn.txt"
   				return data
   	   break;
   			case "aquarius":
-  				data = "texts/aquarius.txt"
+  				data = "aquarius.txt"
   				return data
   	   break;
   			case "pisces":
-  				data = "texts/pisces.txt"
+  				data = "pisces.txt"
   				return data
   	   break;
   			case "aries":
-  				data = "texts/aries.txt"
+  				data = "aries.txt"
   				return data
   	   break;
   			case "taurus":
-  				data = "texts/taurus.txt"
+  				data = "taurus.txt"
   				return data
   	   break;
   			case "gemini":
-  				data = "texts/gemini.txt"
+  				data = "gemini.txt"
   				return data
   	   break;
   			case "cancer":
-  				data = "texts/cancer.txt"
+  				data = "cancer.txt"
   				return data
         break;
       default:
-        data = "texts/default.txt"
+        data = "default.txt"
         return data
       }
     }
@@ -168,6 +184,9 @@ $(".zodiacName").click(function() {
     $(".bigZodiacWhite").addClass("bigZodiacCardOn");
     $(".bigZodiac").addClass("bigZodiacCardOn");
     $(".card").addClass("cardCardOn");
+    $(".bulletPoints").addClass("appear");
+    $(".description").addClass("appear");
+    $(".credits").addClass("appear");
     $(".infosCenter").addClass("infosCenterCardOn");
     $(".currentDate").addClass("currentDateCardOn");
 
@@ -180,12 +199,27 @@ $(".zodiacName").click(function() {
     // $(".card").load("texts/aries_normal.txt");
 
     $.ajax({
-            url : load(updateZodiac),
+            url : "texts/en/bulletPoints/" + load(updateZodiac),
             dataType: "text",
             success : function (data) {
-                $(".card").html(data);
+                $(".bulletPoints").html(data);
             }
-        });
+    });
+    $.ajax({
+            url : "texts/en/description/" + load(updateZodiac),
+            dataType: "text",
+            success : function (data) {
+                $(".description").html(data);
+            }
+    });
+    $.ajax({
+            url : "texts/en/" + "credits.txt",
+            dataType: "text",
+            success : function (data) {
+                $(".credits").html(data);
+            }
+    });
+
     // $(".card").append("<div class='credits'>illustration by <a href='http://terryemi.com/en/eshop/' target='_blank'>Terryemi</a><br/>Text by <a href='http://velvet-venus.com' target='_blank'>Velvet-Venus</a></div>")
   }
 })
@@ -201,6 +235,9 @@ $(".zodiacName").click(function() {
       $(".bigZodiacWhite").removeClass("bigZodiacCardOn");
       $(".bigZodiac").removeClass("bigZodiacCardOn");
       $(".card").removeClass("cardCardOn");
+      $(".bulletPoints").removeClass("appear");
+      $(".description").removeClass("appear");
+      $(".credits").removeClass("appear");
       $(".infosCenter").removeClass("infosCenterCardOn");
       $(".currentDate").removeClass("currentDateCardOn");
 
@@ -213,7 +250,9 @@ $(".zodiacName").click(function() {
       $('.infosCenterWrapper').animate({
         scrollTop: 0
       }, 800, function(){
-        $(".card").html("")
+        $(".bulletPoints").html("")
+        $(".description").html("")
+        $(".credits").html("")
       });
 
     }
