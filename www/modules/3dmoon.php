@@ -5,11 +5,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
-			body {
-				margin: 0px;
-				background-color: #000000;
-				/* overflow: hidden; */
-			}
+
+		canvas{
+			opacity: 0;
+			transition: opacity 3s ease;
+		}
+
 		</style>
 	</head>
 	<body>

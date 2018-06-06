@@ -64,6 +64,8 @@ function initDrag(){
 
   // CLICK
   $(".dragme").mousedown(function(e) {
+    //Bug security
+    clearInterval(velocityInterval);
     if (!cardOn) {
       isDrag = true;
       originX = e.pageX;
@@ -207,7 +209,25 @@ function initDrag(){
     velocityInterval = setInterval(function(){velocityFunc(e)}, 20);
   });
 
-
+  // LEFT & RIGHT
+  $("body").keydown(function(e) {
+    if(e.keyCode == 37) { // left
+      console.log("LEFT");
+      //Bug security
+      clearInterval(velocityInterval);
+      differenceX = 50;
+      velocity = differenceX;
+      velocityInterval = setInterval(function(){velocityFunc(e)}, 20);
+    }
+    else if(e.keyCode == 39) { // right
+      console.log("RIGHT");
+      //Bug security
+      clearInterval(velocityInterval);
+      differenceX = -50;
+      velocity = differenceX;
+      velocityInterval = setInterval(function(){velocityFunc(e)}, 20);
+    }
+  });
 
   function endDrag(){
     clearInterval(velocityInterval);
@@ -217,6 +237,8 @@ function initDrag(){
     updateInfos();
     unhide();
   }
+
+
 
 
 

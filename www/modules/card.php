@@ -26,6 +26,13 @@
   padding-bottom: 4px;
   cursor: pointer;
 }
+.credits a:visited{
+  color: black;
+}
+.credits a:hover{
+  color: #be9638;
+  border-color: #be9638;
+}
 .card{
   width: calc(100% - 200px);
   font-size: 15px;

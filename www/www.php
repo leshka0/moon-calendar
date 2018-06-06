@@ -38,7 +38,7 @@
 		}
 			body {
 				margin: 0px;
-				background-color: #333;
+				background-color: rgba(19,19,19,1);
 				overflow: hidden;
 				color: #888;
 				cursor: crosshair;
@@ -48,6 +48,7 @@
 				position: absolute;
 				top: 20px;
 				left: 20px;
+				display: none;
 				opacity: .2;
 			}
 		</style>

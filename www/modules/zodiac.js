@@ -20,9 +20,9 @@ function checkTime(x) {
   date.setMonth(month - 1);
   date.setYear(year);
   // var daydiff = (date - d) / (1000 * 60 * 60 * 24);
-  console.log("DATE CHECK :");
-  console.log(date);
-	console.log(x.minute);
+  // console.log("DATE CHECK :");
+  // console.log(date);
+	// console.log(x.minute);
 }
 
 function timeFromBeggining(x) {

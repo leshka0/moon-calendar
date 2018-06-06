@@ -12,6 +12,7 @@
 		text-align: left;
 	}
 	.prevContainer{
+		opacity: 0;
 		position: absolute;
 		top: 46vh;
 		right: calc(50vw + 30vh);
@@ -23,6 +24,7 @@
 		transition: all 1s cubic-bezier(.5,0,.01,1);
 	}
 	.nextContainer{
+		opacity: 0;
 		position: absolute;
 		top: 46vh;
 		left: calc(50vw + 30vh);
@@ -210,7 +212,7 @@ function loadNexDates(configMoon){
 	}
 	for (var i = -rangeMonth; i < rangeMonth - 1; i++) {
 		nextMonth.setMonth( nextMonth.getMonth( ) + 1 );
-		console.log(nextMonth);
+		// console.log(nextMonth);
 		$(".month").append("<div class='monthNumbr'>" + monthNames(nextMonth.getMonth()+1) + "</div>");
 
 	}

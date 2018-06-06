@@ -92,6 +92,7 @@
 		opacity: 0;
 	}
 	.phaseName{
+		opacity: 0;
 		z-index: 1;
 		position: absolute;
     bottom: -68px;
@@ -108,6 +109,7 @@
     right: 0;
 	}
 	.currentDate{
+		opacity: 0;
 		color: white;
 		z-index: 1;
 		position: absolute;
@@ -170,8 +172,15 @@ function hideInfos() {
 	$(".zodiacName").addClass("hide");
 	$(".bigZodiac").addClass("hide");
 	$(".bigZodiacWhite").addClass("hide");
-	// console.log("hide");
+	console.log("hide");
 	// $(".infosCenter").addClass("hide");
+	$(".next_moonContainer").css("opacity","1")
+	$(".perv_moonContainer").css("opacity","1")
+	$(".nextContainer").css("opacity","1")
+	$(".prevContainer").css("opacity","1")
+	$(".currentDate").css("opacity","1")
+	$(".phaseName").css("opacity","1")
+
 }
 function updateInfos() {
 	$(".distance").html(moon.phase[day].dis.toFixed(0)+ " KM");

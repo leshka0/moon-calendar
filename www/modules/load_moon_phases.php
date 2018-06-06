@@ -22,14 +22,13 @@ function load_moon_phases(obj){
 			moon = JSON.parse(xmlhttp.responseText)
 			start(moon)
 			// loadNexDates_moon(configMoon)
-			console.log();
 			if(isFunctionCalled == false){
-				console.log("FIST TIMELINE LOAD");
+				// console.log("FIST TIMELINE LOAD");
 			    loadNexDates_moon(configMoon);
 
 			    isFunctionCalled = true;
 			} else {
-				console.log("NEW TIMELINE LOAD");
+				// console.log("NEW TIMELINE LOAD");
 					// clearMoonTimeline();
 			    // loadNexDates_moon(configMoon);
 			}

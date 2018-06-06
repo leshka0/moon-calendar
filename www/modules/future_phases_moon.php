@@ -12,6 +12,7 @@
 		text-align: left;
 	}
 	.perv_moonContainer{
+		opacity: 0;
 		position: absolute;
 		top: calc(46vh + 60px);
 		right: calc(50vw + 30vh);
@@ -23,6 +24,7 @@
 		transition: all 1s cubic-bezier(.5,0,.01,1) .2s;
 	}
 	.next_moonContainer{
+		opacity: 0;
 		position: absolute;
 		top: calc(46vh + 60px);
 		left: calc(50vw + 30vh);
@@ -86,11 +88,11 @@ startingDay_moon.setMonth(0);
 startingDay_moon.setYear(2018);
 
 var range_moon = Math.round((new Date() - startingDay_moon) / (1000 * 60 * 60 * 24));
-console.log("startingDay_moon : " + range_moon);
+// console.log("startingDay_moon : " + range_moon);
 
 var nextDay_moon = new Date(startingDay_moon);
 var perv_moonDay = new Date(startingDay_moon);
-console.log("STARTING DAY MOON : " + startingDay_moon);
+// console.log("STARTING DAY MOON : " + startingDay_moon);
 
 // clear the timeline
 function clearMoonTimeline(){
