@@ -91,4 +91,5 @@
 		<?php include("modules/card.php"); ?>
 		<!-- <script type="text/javascript" src="modules/moreInfos.js"></script> -->
 	</body>
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
 </html>
