@@ -59,7 +59,7 @@
 		left: -8.5%;
 		right: -8.5%;
 		opacity: 1;
-		transition: all 2.5s cubic-bezier(.5,0,.01,1), background-image .2s ease, top 1s cubic-bezier(.5,0,.01,1), bottom 1s cubic-bezier(.5,0,.01,1);
+		transition: opacity 2.5s cubic-bezier(.5,0,.01,1), transform 1.3s cubic-bezier(.5,0,.01,1), background-image .2s ease, top 1s cubic-bezier(.5,0,.01,1), bottom 1s cubic-bezier(.5,0,.01,1);
 	}
 	.activeZone{
 		border-radius: 100%;
