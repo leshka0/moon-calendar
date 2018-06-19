@@ -33,6 +33,7 @@
   border-bottom: 1px solid black;
   padding-bottom: 4px;
   cursor: pointer;
+  color: black;
 }
 .credits a:visited{
   color: black;
@@ -170,7 +171,7 @@ var cardOn = false;
 
 // OPEN CARD
 
-$(".zodiacName").click(function() {
+$(".activeZone").click(function() {
 
 
   if (cardOn == false){
@@ -180,7 +181,7 @@ $(".zodiacName").click(function() {
     $(".zodiacName").addClass("zodiacNameCardOn");
     $(".phaseName").addClass("phaseNameCardOn");
     $(".bigZodiacWhite").css("opacity",1);
-    $(".bigZodiac").css("opacity",0);
+    // $(".bigZodiac").css("opacity",0);
     $(".bigZodiacWhite").addClass("bigZodiacCardOn");
     $(".bigZodiac").addClass("bigZodiacCardOn");
     $(".card").addClass("cardCardOn");
@@ -231,7 +232,7 @@ $(".zodiacName").click(function() {
       $(".zodiacName").removeClass("zodiacNameCardOn");
       $(".phaseName").removeClass("phaseNameCardOn");
       $(".bigZodiacWhite").css("opacity",0);
-      $(".bigZodiac").css("opacity",1);
+      // $(".bigZodiac").css("opacity",0.3);
       $(".bigZodiacWhite").removeClass("bigZodiacCardOn");
       $(".bigZodiac").removeClass("bigZodiacCardOn");
       $(".card").removeClass("cardCardOn");

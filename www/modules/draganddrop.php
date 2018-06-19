@@ -11,7 +11,7 @@
     /* background-color: rgba(255, 255, 50, 0.05); */
   }
   .dropme {
-    z-index: 10;
+    z-index: 12;
     top: 0;
     left:0;
     right: 0;
@@ -19,10 +19,28 @@
     background-color: transparent;
     cursor: none;
   }
+  .prev_arrow {
+    left: calc((50vw - 25vh) / 2);
+  }
+  .next_arrow {
+    right: calc((50vw - 25vh) / 2);
+  }
+  .arrow {
+    top: 49%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 11;
+    background-color: white;
+    color: white;
+    cursor: pointer;
+  }
 </style>
 
 <!-- HTML -->
 <div class="dragme"></div>
+<div class="next_arrow arrow"></div>
+<div class="prev_arrow arrow"></div>
 
 <!-- JAVASCRIPT -->
 <script type="text/javascript">
@@ -144,8 +162,8 @@ function initDrag(){
 
         var newDay = calculDate.getDate();
         var newMonth = calculDate.getMonth()+1;
-        console.log("NEW MONTH : "+ month);
-        console.log("NEW MONTH : "+ newMonth);
+        // console.log("NEW MONTH : "+ month);
+        // console.log("NEW MONTH : "+ newMonth);
         // ONLY IF MONTH IS DIFFERENT
         if (month != newMonth) {
           // change date top
@@ -161,7 +179,7 @@ function initDrag(){
           // update the visual
           configAMoon(newMonth);
           load_moon_phases(configMoon);
-          console.log("NEW MONTH : "+newMonth);
+          // console.log("NEW MONTH : "+newMonth);
         }
 
         day = newDay;
@@ -227,6 +245,25 @@ function initDrag(){
       velocity = differenceX;
       velocityInterval = setInterval(function(){velocityFunc(e)}, 20);
     }
+  });
+
+  // CLICK LEFT right
+  $(".prev_arrow").click(function() {
+    hideInfos();
+    clearInterval(velocityInterval);
+    differenceX = 50;
+    velocity = differenceX;
+    velocityInterval = setInterval(function(){velocityFunc(differenceX)}, 20);
+  });
+  $(".next_arrow").click(function() {
+
+    hideInfos();
+  // $(".circle").css({ WebkitTransform: 'rotate(' + newprevPosition/50 + 'deg)'});
+  // unhide();
+    clearInterval(velocityInterval);
+    differenceX = -50;
+    velocity = differenceX;
+    velocityInterval = setInterval(function(){velocityFunc(differenceX)}, 20);
   });
 
   function endDrag(){

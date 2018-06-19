@@ -70,6 +70,8 @@
 
 		<!-- WEBGL -->
 		<?php include("modules/3dmoon.php"); ?>
+		<!-- PRELOAD -->
+		<script type="text/javascript" src="modules/preload.js"></script>
 		<!-- current state -->
 		<script type="text/javascript" src="modules/currentmoon.js"></script>
 		<!-- future dates on the ruller-->

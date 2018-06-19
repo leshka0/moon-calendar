@@ -35,14 +35,19 @@
     left: 25vw;
     bottom: 0;
     right: 25vw;
-    overflow-y: scroll;
+    overflow-y: auto;
 		overflow-x: hidden;
 	}
+
+.infosCenterWrapper::-webkit-scrollbar {
+    display: none;
+}
 	.hide{
 		opacity: 0 !important;
-		transition: opacity 0.8s ease !important;
+		transition: opacity 0.6s ease !important;
 	}
 	.bigZodiac{
+		/* background-color: red; */
 		z-index: 2;
 		background-image: url("img/zodiac/bigs/default.png");
 		background-position: center;
@@ -53,7 +58,29 @@
 		bottom: -8.5%;
 		left: -8.5%;
 		right: -8.5%;
-		transition: all 3s cubic-bezier(.5,0,.01,1), background-image .2s ease, top 1s cubic-bezier(.5,0,.01,1), bottom 1s cubic-bezier(.5,0,.01,1);
+		opacity: 1;
+		transition: all 2.5s cubic-bezier(.5,0,.01,1), background-image .2s ease, top 1s cubic-bezier(.5,0,.01,1), bottom 1s cubic-bezier(.5,0,.01,1);
+	}
+	.activeZone{
+		border-radius: 100%;
+		cursor: pointer;
+		position: absolute;
+		/* background-color: red; */
+		z-index: 12;
+		top: 1.5%;
+		bottom: 1.5%;
+		left: 1.5%;
+		right: 1.5%;
+	}
+
+	.activeZone:hover + .bigZodiac{
+	  opacity: .25;
+		transform: scale(.97);
+		transition: all 1s cubic-bezier(.5,0,.01,1);
+	}
+	.bigZodiacCardOn:hover{
+	  opacity: 0;
+		transform: scale(1);
 	}
 	.bigZodiacWhite{
 		z-index: 2;
@@ -71,7 +98,7 @@
 	}
 
 	.zodiacName{
-		z-index: 11;
+		/* z-index: 11; */
 		font-family: 'TrajanPro', Arial, sans-serif;
 		text-transform: uppercase;
 		letter-spacing: 15px;
@@ -156,6 +183,8 @@
 			<div class="percent ">
 				<!-- 00% -->
 			</div>
+		<div class="activeZone">
+		</div>
 		<div class="bigZodiac">
 		</div>
 		<div class="bigZodiacWhite">

@@ -86,7 +86,6 @@
 			background-color: rgba(130,130,130,.05);
 	}
 </style>
-
 <div class="nextContainer">
 	<div class="next interface">
 	</div>
@@ -95,34 +94,11 @@
 	<div class="prev interface">
 	</div>
 </div>
-<!-- <div class="currentDate interface">
-	<div style="display: flex; justify-content: center; margin-left:-100%;">
-		<div class="currentContainer">
-			<div class="current">
-			</div>
-		</div>
-		&nbsp;
-		<div class="monthContainer">
-			<div class="month">
-			</div>
-		</div>
-		&nbsp;2018
-	</div>
-</div> -->
 
 <script type="text/javascript">
 
 // var moon
 var currentDay = new Date(new Date());
-
-// RANGE FROM 1st JANUARY
-// var startingDay = new Date();
-// startingDay.setDate(1);
-// startingDay.setMonth(0);
-// startingDay.setYear(2018);
-//
-// var range = Math.round((new Date() - startingDay) / (1000 * 60 * 60 * 24));
-// console.log("startingDay : " + range);
 
 
 var range = 200;

@@ -112,7 +112,7 @@
 			<br/><br/>
 			The Moon cycle has an important control over our development. From the ocean’s tides to the water contained in our bodies, the Moon strongly affect our mind and emotions. Cosmic Weather is a forcast of the moon phase and its astrological sign, allowing you to perpare and get aware of the moon influences on us.
 		</p>
-		<a class="enterBtn">Friday 1st June 2018</a>
+		<a class="enterBtn">enter</a>
 	</div>
 </div>
 
