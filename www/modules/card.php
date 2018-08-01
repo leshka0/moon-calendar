@@ -33,6 +33,7 @@
   border-bottom: 1px solid black;
   padding-bottom: 4px;
   cursor: pointer;
+  cursor: -webkit-image-set(url(img/cursorPointer2x.png) 1x,url(img/cursorPointer2x.png) 2x) 50 50,default;
   color: black;
 }
 .credits a:visited{
@@ -103,7 +104,7 @@
   right: 75vw;
 }
 .cursorCross{
-  cursor: -webkit-image-set(url(img/cursorX2x.png) 1x,url(img/cursorX2x.png) 2x) 50 50,default;
+  cursor: -webkit-image-set(url(img/cursorClose1x.png) 1x,url(img/cursorClose2x.png) 2x) 50 50,default;
 }
 
 </style>

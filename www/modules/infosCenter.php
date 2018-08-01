@@ -64,6 +64,7 @@
 	.activeZone{
 		border-radius: 100%;
 		cursor: pointer;
+	  cursor: -webkit-image-set(url(img/cursorPointer2x.png) 1x,url(img/cursorPointer2x.png) 2x) 50 50,default;
 		position: absolute;
 		/* background-color: red; */
 		z-index: 12;
@@ -110,6 +111,7 @@
 		opacity: 1;
 		transition: all 1s cubic-bezier(.5,0,.01,1);
 		cursor: pointer;
+	  cursor: -webkit-image-set(url(img/cursorPointer2x.png) 1x,url(img/cursorPointer2x.png) 2x) 50 50,default;
 	}
 	.distance{
 		position: absolute;

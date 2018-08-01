@@ -1,3 +1,28 @@
+/* INTRO */
+
+@media (max-width: 1000px) {
+ 	.welcomeMsg{
+		width: 40vw;
+	}
+}
+@media (max-width: 700px) {
+ 	.welcomeMsg{
+		width: 60vw;
+	}
+}
+@media (max-height: 600px) {
+ 	.welcomeMsg{
+		width: 50vw;
+	}
+}
+@media (max-height: 480px) {
+ 	.welcomeMsg{
+		width: 60vw;
+	}
+}
+
+/* RESTE */
+
 @media (max-width: 400px){
 	.welcome {
 		overflow-y: auto;

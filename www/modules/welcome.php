@@ -37,7 +37,6 @@
 	padding: 60px;
 	padding-top: 0px;
 	padding-bottom: 0px;
-	/* height: 60vh; */
 	width: 25vw;
 	background-image:
 		-webkit-image-set(url(img/welcome/t-l.png) 1x, url(img/welcome/t-l.png) 2x ),
@@ -47,27 +46,11 @@
 	background-position: left top, right top, left bottom, right bottom;
   background-repeat: no-repeat;
 	transition: opacity 4s ease .3s, padding 1.5s ease .3s;
+
+	cursor:default;
+  cursor: -webkit-image-set(url(img/cursorCursor1x.png) 1x ,url(img/cursorCursor2x.png) 2x) 50 50,default;
 }
-@media (max-width: 1000px) {
- 	.welcomeMsg{
-		width: 40vw;
-	}
-}
-@media (max-width: 700px) {
- 	.welcomeMsg{
-		width: 60vw;
-	}
-}
-@media (max-height: 600px) {
- 	.welcomeMsg{
-		width: 40vw;
-	}
-}
-@media (max-height: 480px) {
- 	.welcomeMsg{
-		width: 60vw;
-	}
-}
+
 
 .welcomeMsg p{
 	margin-top: 40px;
@@ -92,6 +75,7 @@
   letter-spacing: 0.3px;
   line-height: 1.5em;
 	cursor: pointer;
+  cursor: -webkit-image-set(url(img/cursorPointer1x.png) 1x,url(img/cursorPointer2x.png) 2x) 50 50,default;
 	transition: all .1s ;
 }
 .welcomeMsg a:hover{
@@ -120,7 +104,7 @@
 var init = function(){
 	$(".welcome").css("background-color","rgba(19,19,19,.95)");
 	$(".welcomeMsg").css("opacity","1");
-	$(".welcomeMsg").css("padding","60px");
+	// $(".welcomeMsg").css("padding","60px");
 	$(".welcomeMsg p").css("opacity","1");
 	$("canvas").css("opacity","1");
 	// do on resize

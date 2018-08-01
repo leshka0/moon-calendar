@@ -7,34 +7,54 @@
     left:0;
     right: 0;
     bottom: 0vh;
-    cursor: grab;
+    /* cursor: grab; */
     /* background-color: rgba(255, 255, 50, 0.05); */
   }
   .dropme {
-    z-index: 12;
+    z-index: 13;
     top: 0;
     left:0;
     right: 0;
     bottom: 0;
     background-color: transparent;
-    cursor: none;
+    /* cursor: none; */
+    cursor: crosshair;
+    cursor: -webkit-image-set(url(img/cursorGrabbing2x.png) 1x,url(img/cursorGrabbing2x.png) 2x) 50 50,default;
   }
   .prev_arrow {
+    background-image: url("img/prev.png");
     left: calc((50vw - 25vh) / 2);
   }
   .next_arrow {
+    background-image: url("img/next.png");
     right: calc((50vw - 25vh) / 2);
   }
+  @media (min-width: 700px) {
+    .prev_arrow:hover {
+      left: calc(((50vw - 25vh) / 2) - 40px);
+      width: 71px;
+    }
+    .next_arrow:hover {
+      right: calc(((50vw - 25vh) / 2) - 40px);
+      width: 71px;
+    }
+  }
   .arrow {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     top: 49%;
-    width: 20px;
-    height: 20px;
+    width: 31px;
+    height: 31px;
     position: absolute;
     z-index: 11;
-    background-color: white;
+    /* background-color: white; */
     color: white;
     cursor: pointer;
+    cursor: -webkit-image-set(url(img/cursorPointer2x.png) 1x,url(img/cursorPointer2x.png) 2x) 50 50,default;
+    transition: all .5s ease;
   }
+
 </style>
 
 <!-- HTML -->

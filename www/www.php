@@ -42,7 +42,7 @@
 				overflow: hidden;
 				color: #888;
 				cursor: crosshair;
-				cursor: -webkit-image-set(url(img/cursor2x.png) 1x,url(img/cursor2x.png) 2x) 50 50,default;
+				cursor: -webkit-image-set(url(img/cursorGrab2x.png) 1x,url(img/cursorGrab2x.png) 2x) 50 50,default;
 			}
 			#ex1{
 				position: absolute;
