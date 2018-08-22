@@ -1,0 +1,71 @@
+/* INTRO */
+
+@media (max-width: 1000px) {
+ 	.welcomeMsg{
+		width: 40vw;
+	}
+}
+@media (max-width: 700px) {
+ 	.welcomeMsg{
+		width: 60vw;
+	}
+}
+@media (max-height: 600px) {
+ 	.welcomeMsg{
+		width: 50vw;
+	}
+}
+@media (max-height: 480px) {
+ 	.welcomeMsg{
+		width: 60vw;
+	}
+}
+
+/* RESTE */
+
+@media (max-width: 400px){
+	.welcome {
+		overflow-y: auto;
+	}
+	.welcomeMsg {
+	    width: 76vw;
+			padding: 30px !important;
+			/* margin-top: 80px; */
+			/* overflow-y: scroll; */
+	}
+	@media (max-height: 600px){
+		.welcomeMsg p {
+			/* margin-top: calc(600px - 100vh); */
+		}
+	}
+	.logo{
+		    transform: scale(.7);
+	}
+
+	.logostill{
+		    transform: scale(.7);
+	}
+	.infosCenterWrapper{
+		left: 0;
+		right: 0;
+	}
+	.infosCenter{
+		width: 90vw;
+		left: 5%;
+	}
+	.card{
+		width: calc(100% - 40px);
+		padding-left: 20px;
+    padding-right: 20px;
+		margin-bottom: 20px;
+	}
+	.arrow{
+		top: calc(25vh - 90px)
+	}
+	.prev_arrow {
+    left: calc(50vw - 110px);
+	}
+	.next_arrow {
+    right: calc(50vw - 110px);
+	}
+}

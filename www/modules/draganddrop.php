@@ -7,6 +7,9 @@
     left:0;
     right: 0;
     bottom: 0vh;
+
+    cursor: grab;
+    cursor: -webkit-image-set(url(img/cursorGrab1x.png) 1x,url(img/cursorGrab2x.png) 2x) 50 50,default;
     /* cursor: grab; */
     /* background-color: rgba(255, 255, 50, 0.05); */
   }
@@ -102,6 +105,7 @@ function initDrag(){
 
   // CLICK
   $(".dragme").mousedown(function(e) {
+    console.log("DRAG");
     //Bug security
     clearInterval(velocityInterval);
     if (!cardOn) {
@@ -111,6 +115,29 @@ function initDrag(){
       hideInfos();
     }
   });
+
+
+  // DRG DROP FOR MOBILE
+  // change all click for mouseup
+  function touchHandler(event) {
+    var touch = event.changedTouches[0];
+    var simulatedEvent = document.createEvent("MouseEvent");
+        simulatedEvent.initMouseEvent({
+        touchstart: "mousedown",
+        touchmove: "mousemove",
+        touchend: "mouseup"
+    }[event.type], true, true, window, 1,
+        touch.screenX, touch.screenY,
+        touch.clientX, touch.clientY, false,
+        false, false, false, 0, null);
+    touch.target.dispatchEvent(simulatedEvent);
+    event.preventDefault();
+    }
+    document.addEventListener("touchstart", touchHandler, true);
+    document.addEventListener("touchmove", touchHandler, true);
+    document.addEventListener("touchend", touchHandler, true);
+    document.addEventListener("touchcancel", touchHandler, true);
+
 
   // DRAG
   var soundOffcet
@@ -268,14 +295,14 @@ function initDrag(){
   });
 
   // CLICK LEFT right
-  $(".prev_arrow").click(function() {
+  $(".prev_arrow").mousedown(function() {
     hideInfos();
     clearInterval(velocityInterval);
     differenceX = 50;
     velocity = differenceX;
     velocityInterval = setInterval(function(){velocityFunc(differenceX)}, 20);
   });
-  $(".next_arrow").click(function() {
+  $(".next_arrow").mousedown(function() {
 
     hideInfos();
   // $(".circle").css({ WebkitTransform: 'rotate(' + newprevPosition/50 + 'deg)'});

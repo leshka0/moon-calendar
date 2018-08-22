@@ -110,7 +110,7 @@ var init = function(){
 	// do on resize
 	$(".logo").css("top",$(".logostill").position().top);
 }
-	$(".enterBtn").click(function() {
+	$(".enterBtn").mousedown(function() {
   	$(".welcome").addClass("welcomeDisapear");
 		hideInfos();
 		setTimeout(function(){

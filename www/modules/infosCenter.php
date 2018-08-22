@@ -64,7 +64,7 @@
 	.activeZone{
 		border-radius: 100%;
 		cursor: pointer;
-	  cursor: -webkit-image-set(url(img/cursorPointer2x.png) 1x,url(img/cursorPointer2x.png) 2x) 50 50,default;
+	  cursor: -webkit-image-set(url(img/cursorPointer1x.png) 1x,url(img/cursorPointer2x.png) 2x) 50 50,default;
 		position: absolute;
 		/* background-color: red; */
 		z-index: 12;
@@ -84,7 +84,7 @@
 		transform: scale(1);
 	}
 	.bigZodiacWhite{
-		z-index: 2;
+		/* z-index: 20; */
 		background-image: url("img/zodiac/whites/default.png");
 		background-position: center;
 		background-size: contain;
@@ -99,7 +99,7 @@
 	}
 
 	.zodiacName{
-		/* z-index: 11; */
+		z-index: 17;
 		font-family: 'TrajanPro', Arial, sans-serif;
 		text-transform: uppercase;
 		letter-spacing: 15px;
@@ -111,7 +111,7 @@
 		opacity: 1;
 		transition: all 1s cubic-bezier(.5,0,.01,1);
 		cursor: pointer;
-	  cursor: -webkit-image-set(url(img/cursorPointer2x.png) 1x,url(img/cursorPointer2x.png) 2x) 50 50,default;
+	  cursor: -webkit-image-set(url(img/cursorPointer1x.png) 1x,url(img/cursorPointer2x.png) 2x) 50 50,default;
 	}
 	.distance{
 		position: absolute;
@@ -122,7 +122,7 @@
 	}
 	.phaseName{
 		opacity: 0;
-		z-index: 1;
+		z-index: 17;
 		position: absolute;
     bottom: -68px;
     left: 0;
@@ -138,9 +138,10 @@
     right: 0;
 	}
 	.currentDate{
+		pointer-events: none;
 		opacity: 0;
 		color: white;
-		z-index: 1;
+		z-index: 17;
 		position: absolute;
 		top: -88px;
 		/* top: calc(20vh - 56px); */
@@ -192,6 +193,7 @@
 		<div class="bigZodiacWhite">
 		</div>
 		<div class="card">
+			<div class="closeBtn"></div>
 			<p class='bulletPoints'></p>
 			<p class='description'></p>
 			<div class='credits'></div>

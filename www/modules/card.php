@@ -3,6 +3,25 @@
 .bigZodiacCardOn{
   top: 30px;
   bottom: 60px;
+  z-index: 16;
+  pointer-events: none;
+}
+.closeBtn {
+  top: 20px;
+  right: 20px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 31px;
+  height: 31px;
+  position: absolute;
+  z-index: 17;
+  background-image: url("img/close.png");
+  cursor: pointer;
+  cursor: -webkit-image-set(url(img/cursorPointer2x.png) 1x,url(img/cursorPointer2x.png) 2x) 50 50,default;
+  transition: all .5s ease;
+    opacity: 0;
+    transition: opacity 1s;
 }
 .bulletPoints{
     font-size: 10px;
@@ -52,6 +71,7 @@
   opacity: 1;
 }
 .card{
+  z-index: 15;
   width: calc(100% - 200px);
   font-size: 15px;
   font-family: 'AndaleMono', Arial, sans-serif;
@@ -73,7 +93,7 @@
   pointer-events: none;
 }
 .cardCardOn{
-  z-index: 1;
+  /* z-index: 1; */
   opacity: 1;
   background-color: #f6f1ee;
   pointer-events: all;
@@ -172,13 +192,14 @@ var cardOn = false;
 
 // OPEN CARD
 
-$(".activeZone").click(function() {
+$(".activeZone").mousedown(function() {
 
 
   if (cardOn == false){
     cardOn = true;
-    $(".dragme").css("z-index",0);
+    $(".dragme").css("z-index",12);
     $(".dragme").addClass("cursorCross");
+    $(".arrow").css("opacity",0);
     $(".zodiacName").addClass("zodiacNameCardOn");
     $(".phaseName").addClass("phaseNameCardOn");
     $(".bigZodiacWhite").css("opacity",1);
@@ -188,6 +209,7 @@ $(".activeZone").click(function() {
     $(".card").addClass("cardCardOn");
     $(".bulletPoints").addClass("appear");
     $(".description").addClass("appear");
+    $(".closeBtn").addClass("appear");
     $(".credits").addClass("appear");
     $(".infosCenter").addClass("infosCenterCardOn");
     $(".currentDate").addClass("currentDateCardOn");
@@ -225,11 +247,12 @@ $(".activeZone").click(function() {
     // $(".card").append("<div class='credits'>illustration by <a href='http://terryemi.com/en/eshop/' target='_blank'>Terryemi</a><br/>Text by <a href='http://velvet-venus.com' target='_blank'>Velvet-Venus</a></div>")
   }
 })
-  $(".dragme").click(function() {
+  $(".dragme, .closeBtn").mousedown(function() {
     if (cardOn == true){
       cardOn = false;
       $(".dragme").css("z-index",10);
       $(".dragme").removeClass("cursorCross");
+      $(".arrow").css("opacity",1);
       $(".zodiacName").removeClass("zodiacNameCardOn");
       $(".phaseName").removeClass("phaseNameCardOn");
       $(".bigZodiacWhite").css("opacity",0);
@@ -239,6 +262,7 @@ $(".activeZone").click(function() {
       $(".card").removeClass("cardCardOn");
       $(".bulletPoints").removeClass("appear");
       $(".description").removeClass("appear");
+      $(".closeBtn").removeClass("appear");
       $(".credits").removeClass("appear");
       $(".infosCenter").removeClass("infosCenterCardOn");
       $(".currentDate").removeClass("currentDateCardOn");

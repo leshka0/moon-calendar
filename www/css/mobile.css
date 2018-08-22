@@ -4,6 +4,12 @@
  	.welcomeMsg{
 		width: 40vw;
 	}
+  .card{
+		width: calc(100% - 40px);
+		padding-left: 20px;
+    padding-right: 20px;
+		margin-bottom: 20px;
+	}
 }
 @media (max-width: 700px) {
  	.welcomeMsg{
@@ -23,16 +29,37 @@
 
 /* RESTE */
 
-@media (max-width: 400px){
+@media (max-width: 700px){
+  .percent{
+		top: -45px;
+	}
+  .currentDate{
+    top: -79px;
+  }
+  .zodiacName{
+		letter-spacing: 9px;
+		font-size: 2em;
+    transform: translate(0,-17px);
+	}
 	.welcome {
 		overflow-y: auto;
 	}
 	.welcomeMsg {
 	    width: 76vw;
 			padding: 30px !important;
-			/* margin-top: 80px; */
+      margin-top: 300px;
+      margin-bottom: 50px;
 			/* overflow-y: scroll; */
 	}
+  .welcomeMsg p {
+    margin-bottom : 90px;
+  }
+  .welcomeMsg a {
+    top: -40px;
+    position: relative;
+  }
+
+
 	@media (max-height: 600px){
 		.welcomeMsg p {
 			/* margin-top: calc(600px - 100vh); */
@@ -60,7 +87,7 @@
 		margin-bottom: 20px;
 	}
 	.arrow{
-		top: calc(25vh - 90px)
+		top: calc(25vh - 90px);
 	}
 	.prev_arrow {
     left: calc(50vw - 110px);

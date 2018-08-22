@@ -42,7 +42,7 @@
 				overflow: hidden;
 				color: #888;
 				cursor: crosshair;
-				cursor: -webkit-image-set(url(img/cursorGrab2x.png) 1x,url(img/cursorGrab2x.png) 2x) 50 50,default;
+				cursor: -webkit-image-set(url(img/cursorCursor1x.png) 1x,url(img/cursorCursor2x.png) 2x) 50 50,default;
 			}
 			#ex1{
 				position: absolute;
@@ -61,6 +61,24 @@
 
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+		<!-- Prismic -->
+		<!-- <script src="https://unpkg.com/prismic-javascript@1.5.0/dist/prismic-javascript.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			console.log( 'TEST' );
+			PrismicJS.api("http://cosmicweather.prismic.io/api", function(error, api) {
+			  var options = {}; // In Node.js, pass the request as 'req' to read the reference from the cookies
+			  api.query("", options, function(err, response) { // An empty query will return all the documents
+			    if (err) {
+			      console.log("Something went wrong: ", err);
+			    }
+			    console.log("Documents: ", response.documents);
+			  });
+			});
+		</script> -->
+
+
+
+
 		<!-- TweenLite -->
 		<script type="text/javascript" src="build/greensock/TweenLite.min.js"></script>
 		<script type="text/javascript" src="build/greensock/plugins/CSSPlugin.min.js"></script>
@@ -92,4 +110,5 @@
 		<!-- <script type="text/javascript" src="modules/moreInfos.js"></script> -->
 	</body>
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+
 </html>
