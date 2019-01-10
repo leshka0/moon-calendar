@@ -1,14 +1,14 @@
 <style>
 	.perv_moon{
 		/* font-family: sans-serif; */
-		color: white;
 		position: absolute;
+		color: white;
 		text-align: right;
 	}
 	.next_moon{
 		/* font-family: sans-serif; */
 		position: absolute;
-		/* color: white; */
+		color: white;
 		text-align: left;
 	}
 	.perv_moonContainer{
@@ -60,7 +60,13 @@
 		top: 0;
 		left: 0;
 	}
+	.newMoonPhase{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 	.icoZodiac{
+		position: absolute;
 		/* margin-left: 12px; */
 		width: 30px;
 		height: 30px;
@@ -87,6 +93,8 @@ startingDay_moon.setDate(1);
 startingDay_moon.setMonth(0);
 startingDay_moon.setYear(2018);
 
+
+
 var range_moon = Math.round((new Date() - startingDay_moon) / (1000 * 60 * 60 * 24));
 // console.log("startingDay_moon : " + range_moon);
 
@@ -104,6 +112,8 @@ function clearMoonTimeline(){
 	nextDay_moon = new Date(startingDay_moon);
 	perv_moonDay = new Date(startingDay_moon);
 }
+
+
 // load dates timeline
 function loadNexDates_moon(configMoon){
 	for (var i = 0; i < (range_moon*2)-1; i++) {
@@ -111,19 +121,21 @@ function loadNexDates_moon(configMoon){
 		nextDay_moon.setDate(nextDay_moon.getDate() + 1);
 		var day = nextDay_moon.getDate();
 
+		// OLD MOON
+
 		// FULLMOON VALUES FOR 2018
-		if (i+1 == 1 || i+1 == 30 || i+1 == 60 || i+1 == 89 || i+1 == 119 || i+1 == 148 || i+1 == 178 || i+1 == 207 || i+1 == 237 || i+1 == 267 || i+1 == 296 || i+1 == 326 || i+1 == 355)  {
-			$(".next_moon").append("<div class='date_moon'>" + "FM" +" </div>");
-			$(".perv_moon").append("<div class='date_moon'>" + "FM" +" </div>");
+		// if (i+1 == 1 || i+1 == 30 || i+1 == 60 || i+1 == 89 || i+1 == 119 || i+1 == 148 || i+1 == 178 || i+1 == 207 || i+1 == 237 || i+1 == 267 || i+1 == 296 || i+1 == 326 || i+1 == 355)  {
+			// $(".next_moon").append("<div class='date_moon'>" + "<img height='32' src='img/moonPhases/FM.png' style='border-top: 23px solid transparent;'>" +" </div>");
+			// $(".perv_moon").append("<div class='date_moon'>" + "<img height='32' src='img/moonPhases/FM.png' style='border-top: 23px solid transparent;'>" +" </div>");
 			// NEWMOON VALUES FOR 2018
-		}else if (i+1 == 16 || i+1 == 45 || i+1 == 75 || i+1 == 105 || i+1 == 134 || i+1 == 163 || i+1 == 193 || i+1 == 222 || i+1 == 251 || i+1 == 281 || i+1 == 310 || i+1 == 340)  {
-			$(".next_moon").append("<div class='date_moon'>" + "NM" +" </div>");
-			$(".perv_moon").append("<div class='date_moon'>" + "NM" +" </div>");
-		}
-		else {
+		// }else if (i+1 == 16 || i+1 == 45 || i+1 == 75 || i+1 == 105 || i+1 == 134 || i+1 == 163 || i+1 == 193 || i+1 == 222 || i+1 == 251 || i+1 == 281 || i+1 == 310 || i+1 == 340)  {
+			// $(".next_moon").append("<div class='date_moon'>" + "<img height='32' src='img/moonPhases/NM.png' style='border-top: 23px solid transparent;'>" +" </div>");
+			// $(".perv_moon").append("<div class='date_moon'>" + "<img height='32' src='img/moonPhases/NM.png' style='border-top: 23px solid transparent;'>" +" </div>");
+		// }
+		// else {
 			$(".next_moon").append("<div class='date_moon'> &nbsp; </div>");
 			$(".perv_moon").append("<div class='date_moon'> &nbsp; </div>");
-		}
+		// }
 	}
 	$(".next_moon").css("left",-range_moon*100 + 50 + "px");
 	$(".perv_moon").css("right",-range_moon*100 + 50 + "px");

@@ -14,7 +14,7 @@
     /* background-color: rgba(255, 255, 50, 0.05); */
   }
   .dropme {
-    z-index: 13;
+    z-index: 13 !important;
     top: 0;
     left:0;
     right: 0;

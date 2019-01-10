@@ -77,10 +77,417 @@ function compareTime(a, b) {
   // console.log(daydiff.toFixed(4));
   return daydiff.toFixed(4);
 }
+var newMoonPhases = [
+  moons2018 = [
+  	  {
+        type:   "fullmoon",
+  	    hour:   02,
+  	    minute: 24,
+  	    day:    02,
+  	    month:  01,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   02,
+  		  minute: 17,
+  		  day:    17,
+  	    month:  01,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   13,
+  		  minute: 26,
+  		  day:    31,
+  	    month:  01,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   21,
+  		  minute: 05,
+  		  day:    15,
+  	    month:  02,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   00,
+  		  minute: 51,
+  		  day:    02,
+  	    month:  03,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   13,
+  		  minute: 11,
+  		  day:    17,
+  	    month:  03,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   12,
+  		  minute: 36,
+  		  day:    31,
+  	    month:  03,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   01,
+  		  minute: 57,
+  		  day:    16,
+  	    month:  04,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   00,
+  		  minute: 58,
+  		  day:    30,
+  	    month:  04,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   11,
+  		  minute: 47,
+  		  day:    15,
+  	    month:  05,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   14,
+  		  minute: 19,
+  		  day:    29,
+  	    month:  05,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   19,
+  		  minute: 43,
+  		  day:    13,
+  	    month:  06,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   04,
+  		  minute: 52,
+  		  day:    28,
+  	    month:  06,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   02,
+  		  minute: 47,
+  		  day:    13,
+  	    month:  07,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   20,
+  		  minute: 20,
+  		  day:    27,
+  	    month:  07,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   09,
+  		  minute: 57,
+  		  day:    11,
+  	    month:  08,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   11,
+  		  minute: 56,
+  		  day:    26,
+  	    month:  08,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   18,
+  		  minute: 01,
+  		  day:    09,
+  	    month:  09,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   02,
+  		  minute: 52,
+  		  day:    25,
+  	    month:  09,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   03,
+  		  minute: 46,
+  		  day:    09,
+  	    month:  10,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   16,
+  		  minute: 45,
+  		  day:    24,
+  	    month:  10,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   16,
+  		  minute: 01,
+  		  day:    07,
+  	    month:  11,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   05,
+  		  minute: 39,
+  		  day:    23,
+  	    month:  11,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   07,
+  		  minute: 20,
+  		  day:    07,
+  	    month:  12,
+  	    year:   2018
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   17,
+  		  minute: 48,
+  		  day:    22,
+  	    month:  12,
+  	    year:   2018
+  	  }
+  ],
 
-// var zodiac []
+  moons2018 = [
+  	  {
+        type:   "newmoon",
+  			hour:   01,
+  		  minute: 28,
+  		  day:    06,
+  	    month:  01,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   05,
+  		  minute: 15,
+  		  day:    21,
+  	    month:  01,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   21,
+  		  minute: 03,
+  		  day:    04,
+  	    month:  02,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   15,
+  		  minute: 53,
+  		  day:    19,
+  	    month:  02,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   16,
+  		  minute: 03,
+  		  day:    06,
+  	    month:  03,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   01,
+  		  minute: 42,
+  		  day:    21,
+  	    month:  03,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   08,
+  		  minute: 50,
+  		  day:    05,
+  	    month:  04,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   11,
+  		  minute: 12,
+  		  day:    19,
+  	    month:  04,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   22,
+  		  minute: 45,
+  		  day:    04,
+  	    month:  05,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   21,
+  		  minute: 11,
+  		  day:    18,
+  	    month:  05,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   10,
+  		  minute: 01,
+  		  day:    03,
+  	    month:  06,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   08,
+  		  minute: 30,
+  		  day:    17,
+  	    month:  06,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   19,
+  		  minute: 16,
+  		  day:    02,
+  	    month:  07,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   21,
+  		  minute: 38,
+  		  day:    16,
+  	    month:  07,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   03,
+  		  minute: 11,
+  		  day:    01,
+  	    month:  08,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   12,
+  		  minute: 29,
+  		  day:    15,
+  	    month:  08,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   10,
+  		  minute: 37,
+  		  day:    30,
+  	    month:  08,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   04,
+  		  minute: 32,
+  		  day:    14,
+  	    month:  09,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   18,
+  		  minute: 26,
+  		  day:    28,
+  	    month:  09,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   21,
+  		  minute: 07,
+  		  day:    13,
+  	    month:  10,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   03,
+  		  minute: 38,
+  		  day:    28,
+  	    month:  10,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   13,
+  		  minute: 34,
+  		  day:    12,
+  	    month:  11,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   15,
+  		  minute: 05,
+  		  day:    26,
+  	    month:  11,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "fullmoon",
+  			hour:   05,
+  		  minute: 12,
+  		  day:    12,
+  	    month:  12,
+  	    year:   2019
+  	  },
+  	  {
+        type:   "newmoon",
+  			hour:   05,
+  		  minute: 12,
+  		  day:    26,
+  	    month:  12,
+  	    year:   2019
+  	  }
+  ]
+];
 
-var zodiac1 = [
+var zodiacs = [
+
+zodiac1 = [
   {
     sign:   "leo",
     hour:   07,
@@ -177,9 +584,9 @@ var zodiac1 = [
     month:  1,
     year:   2018
   }
-];
+],
 
-var zodiac2 = [
+zodiac2 = [
   {
     sign:   "leo",
     hour:   18,
@@ -276,9 +683,9 @@ var zodiac2 = [
     month:  2,
     year:   2018
   }
-];
+],
 
-var zodiac3 = [
+zodiac3 = [
   {
     sign:   "leo",
     hour:   04,
@@ -375,9 +782,9 @@ var zodiac3 = [
     month:  3,
     year:   2018
   }
-];
+],
 
-var zodiac4 = [
+zodiac4 = [
   {
     sign:   "leo",
     hour:   11,
@@ -474,9 +881,9 @@ var zodiac4 = [
     month:  4,
     year:   2018
   }
-];
+],
 
-var zodiac5 = [
+zodiac5 = [
   {
     sign:   "leo",
     hour:   17,
@@ -573,9 +980,9 @@ var zodiac5 = [
     month:  5,
     year:   2018
   }
-];
+],
 
-var zodiac6 = [
+zodiac6 = [
   {
     sign:   "leo",
     hour:   23,
@@ -672,9 +1079,9 @@ var zodiac6 = [
     month:  6,
     year:   2018
   }
-];
+],
 
-var zodiac7 = [
+zodiac7 = [
   {
     sign:   "leo",
     hour:   07,
@@ -751,7 +1158,7 @@ var zodiac7 = [
     sign:   "taurus",
     hour:   12,
     minute: 51,
-    day:    17,
+    day:    07,
     month:  7,
     year:   2018
   },
@@ -771,9 +1178,9 @@ var zodiac7 = [
     month:  7,
     year:   2018
   }
-];
+],
 
-var zodiac8 = [
+zodiac8 = [
   {
     sign:   "leo",
     hour:   17,
@@ -870,10 +1277,9 @@ var zodiac8 = [
     month:  8,
     year:   2018
   }
-];
+],
 
-
-var zodiac9 = [
+zodiac9 = [
   {
     sign:   "leo",
     hour:   04,
@@ -970,6 +1376,603 @@ var zodiac9 = [
     month:  9,
     year:   2018
   }
+],
+
+zodiac10 = [
+  {
+    sign:   "leo",
+    hour:   14,
+    minute: 29,
+    day:    8,
+    month:  9,
+    year:   2018
+  },
+  {
+    sign:   "virgo",
+    hour:   14,
+    minute: 29,
+    day:    08,
+    month:  9,
+    year:   2018
+  },
+  {
+    sign:   "libra",
+    hour:   15,
+    minute: 20,
+    day:    10,
+    month:  9,
+    year:   2018
+  },
+  {
+    sign:   "scorpio",
+    hour:   18,
+    minute: 15,
+    day:    12,
+    month:  9,
+    year:   2018
+  },
+  {
+    sign:   "sagittarius",
+    hour:   00,
+    minute: 45,
+    day:    15,
+    month:  9,
+    year:   2018
+  },
+  {
+    sign:   "capricorn",
+    hour:   11,
+    minute: 08,
+    day:    17,
+    month:  9,
+    year:   2018
+  },
+  {
+    sign:   "aquarius",
+    hour:   23,
+    minute: 52,
+    day:    19,
+    month:  9,
+    year:   2018
+  },
+  {
+    sign:   "pisces",
+    hour:   12,
+    minute: 27,
+    day:    22,
+    month:  9,
+    year:   2018
+  },
+  {
+    sign:   "aries",
+    hour:   23,
+    minute: 04,
+    day:    24,
+    month:  9,
+    year:   2018
+  },
+  {
+    sign:   "taurus",
+    hour:   07,
+    minute: 16,
+    day:    27,
+    month:  9,
+    year:   2018
+  },
+  {
+    sign:   "gemini",
+    hour:   13,
+    minute: 26,
+    day:    29,
+    month:  9,
+    year:   2018
+  },
+  {
+    sign:   "cancer",
+    hour:   18,
+    minute: 01,
+    day:    01,
+    month:  10,
+    year:   2018
+  }
+],
+
+zodiac11 = [
+  {
+    sign:   "leo",
+    hour:   21,
+    minute: 12,
+    day:    03,
+    month:  10,
+    year:   2018
+  },
+  {
+    sign:   "virgo",
+    hour:   23,
+    minute: 19,
+    day:    05,
+    month:  10,
+    year:   2018
+  },
+  {
+    sign:   "libra",
+    hour:   01,
+    minute: 10,
+    day:    08,
+    month:  10,
+    year:   2018
+  },
+  {
+    sign:   "scorpio",
+    hour:   04,
+    minute: 10,
+    day:    10,
+    month:  10,
+    year:   2018
+  },
+  {
+    sign:   "sagittarius",
+    hour:   09,
+    minute: 53,
+    day:    12,
+    month:  10,
+    year:   2018
+  },
+  {
+    sign:   "capricorn",
+    hour:   19,
+    minute: 17,
+    day:    14,
+    month:  10,
+    year:   2018
+  },
+  {
+    sign:   "aquarius",
+    hour:   07,
+    minute: 36,
+    day:    17,
+    month:  10,
+    year:   2018
+  },
+  {
+    sign:   "pisces",
+    hour:   20,
+    minute: 21,
+    day:    19,
+    month:  10,
+    year:   2018
+  },
+  {
+    sign:   "aries",
+    hour:   06,
+    minute: 59,
+    day:    22,
+    month:  10,
+    year:   2018
+  },
+  {
+    sign:   "taurus",
+    hour:   14,
+    minute: 34,
+    day:    24,
+    month:  10,
+    year:   2018
+  },
+  {
+    sign:   "gemini",
+    hour:   19,
+    minute: 41,
+    day:    26,
+    month:  10,
+    year:   2018
+  },
+  {
+    sign:   "cancer",
+    hour:   23,
+    minute: 27,
+    day:    28,
+    month:  10,
+    year:   2018
+  }
+],
+
+zodiac12 = [
+  {
+    sign:   "leo",
+    hour:   02,
+    minute: 42,
+    day:    31,
+    month:  10,
+    year:   2018
+  },
+  {
+    sign:   "virgo",
+    hour:   05,
+    minute: 48,
+    day:    02,
+    month:  11,
+    year:   2018
+  },
+  {
+    sign:   "libra",
+    hour:   09,
+    minute: 01,
+    day:    04,
+    month:  11,
+    year:   2018
+  },
+  {
+    sign:   "scorpio",
+    hour:   13,
+    minute: 03,
+    day:    06,
+    month:  11,
+    year:   2018
+  },
+  {
+    sign:   "sagittarius",
+    hour:   19,
+    minute: 00,
+    day:    08,
+    month:  11,
+    year:   2018
+  },
+  {
+    sign:   "capricorn",
+    hour:   03,
+    minute: 55,
+    day:    11,
+    month:  11,
+    year:   2018
+  },
+  {
+    sign:   "aquarius",
+    hour:   15,
+    minute: 46,
+    day:    13,
+    month:  11,
+    year:   2018
+  },
+  {
+    sign:   "pisces",
+    hour:   04,
+    minute: 42,
+    day:    16,
+    month:  11,
+    year:   2018
+  },
+  {
+    sign:   "aries",
+    hour:   15,
+    minute: 56,
+    day:    18,
+    month:  11,
+    year:   2018
+  },
+  {
+    sign:   "taurus",
+    hour:   23,
+    minute: 43,
+    day:    20,
+    month:  11,
+    year:   2018
+  },
+  {
+    sign:   "gemini",
+    hour:   04,
+    minute: 11,
+    day:    23,
+    month:  11,
+    year:   2018
+  },
+  {
+    sign:   "cancer",
+    hour:   06,
+    minute: 38,
+    day:    25,
+    month:  11,
+    year:   2018
+  }
+],
+
+zodiac13 = [
+  {
+    sign:   "leo",
+    hour:   08,
+    minute: 35,
+    day:    27,
+    month:  11,
+    year:   2018
+  },
+  {
+    sign:   "virgo",
+    hour:   11,
+    minute: 08,
+    day:    29,
+    month:  11,
+    year:   2018
+  },
+  {
+    sign:   "libra",
+    hour:   14,
+    minute: 49,
+    day:    01,
+    month:  12,
+    year:   2018
+  },
+  {
+    sign:   "scorpio",
+    hour:   19,
+    minute: 55,
+    day:    03,
+    month:  12,
+    year:   2018
+  },
+  {
+    sign:   "sagittarius",
+    hour:   02,
+    minute: 49,
+    day:    06,
+    month:  12,
+    year:   2018
+  },
+  {
+    sign:   "capricorn",
+    hour:   12,
+    minute: 02,
+    day:    08,
+    month:  12,
+    year:   2018
+  },
+  {
+    sign:   "aquarius",
+    hour:   23,
+    minute: 40,
+    day:    10,
+    month:  12,
+    year:   2018
+  },
+  {
+    sign:   "pisces",
+    hour:   12,
+    minute: 40,
+    day:    13,
+    month:  12,
+    year:   2018
+  },
+  {
+    sign:   "aries",
+    hour:   00,
+    minute: 44,
+    day:    16,
+    month:  12,
+    year:   2018
+  },
+  {
+    sign:   "taurus",
+    hour:   09,
+    minute: 38,
+    day:    20,
+    month:  12,
+    year:   2018
+  },
+  {
+    sign:   "gemini",
+    hour:   14,
+    minute: 35,
+    day:    20,
+    month:  12,
+    year:   2018
+  },
+  {
+    sign:   "cancer",
+    hour:   16,
+    minute: 28,
+    day:    22,
+    month:  12,
+    year:   2018
+  }
+],
+
+zodiac14 = [
+  {
+    sign:   "leo",
+    hour:   16,
+    minute: 59,
+    day:    24,
+    month:  12,
+    year:   2018
+  },
+  {
+    sign:   "virgo",
+    hour:   17,
+    minute: 50,
+    day:    26,
+    month:  12,
+    year:   2018
+  },
+  {
+    sign:   "libra",
+    hour:   20,
+    minute: 23,
+    day:    28,
+    month:  12,
+    year:   2018
+  },
+  {
+    sign:   "scorpio",
+    hour:   01,
+    minute: 23,
+    day:    31,
+    month:  12,
+    year:   2018
+  },
+  {
+    sign:   "sagittarius",
+    hour:   08,
+    minute: 59,
+    day:    02,
+    month:  01,
+    year:   2019
+  },
+  {
+    sign:   "capricorn",
+    hour:   18,
+    minute: 55,
+    day:    04,
+    month:  01,
+    year:   2019
+  },
+  {
+    sign:   "aquarius",
+    hour:   06,
+    minute: 46,
+    day:    07,
+    month:  01,
+    year:   2019
+  },
+  {
+    sign:   "pisces",
+    hour:   19,
+    minute: 44,
+    day:    09,
+    month:  01,
+    year:   2019
+  },
+  {
+    sign:   "aries",
+    hour:   08,
+    minute: 18,
+    day:    12,
+    month:  01,
+    year:   2019
+  },
+  {
+    sign:   "taurus",
+    hour:   18,
+    minute: 32,
+    day:    14,
+    month:  01,
+    year:   2019
+  },
+  {
+    sign:   "gemini",
+    hour:   01,
+    minute: 01,
+    day:    17,
+    month:  01,
+    year:   2019
+  },
+  {
+    sign:   "cancer",
+    hour:   03,
+    minute: 44,
+    day:    19,
+    month:  01,
+    year:   2019
+  }
+],
+
+zodiac15 = [
+  {
+    sign:   "leo",
+    hour:   03,
+    minute: 55,
+    day:    21,
+    month:  01,
+    year:   2019
+  },
+  {
+    sign:   "virgo",
+    hour:   03,
+    minute: 22,
+    day:    23,
+    month:  01,
+    year:   2019
+  },
+  {
+    sign:   "libra",
+    hour:   04,
+    minute: 03,
+    day:    25,
+    month:  01,
+    year:   2019
+  },
+  {
+    sign:   "scorpio",
+    hour:   07,
+    minute: 31,
+    day:    27,
+    month:  01,
+    year:   2019
+  },
+  {
+    sign:   "sagittarius",
+    hour:   14,
+    minute: 33,
+    day:    30,
+    month:  01,
+    year:   2019
+  },
+  {
+    sign:   "capricorn",
+    hour:   00,
+    minute: 48,
+    day:    01,
+    month:  02,
+    year:   2019
+  },
+  {
+    sign:   "aquarius",
+    hour:   13,
+    minute: 04,
+    day:    04,
+    month:  02,
+    year:   2019
+  },
+  {
+    sign:   "pisces",
+    hour:   02,
+    minute: 02,
+    day:    06,
+    month:  02,
+    year:   2019
+  },
+  {
+    sign:   "aries",
+    hour:   14,
+    minute: 35,
+    day:    08,
+    month:  02,
+    year:   2019
+  },
+  {
+    sign:   "taurus",
+    hour:   01,
+    minute: 29,
+    day:    11,
+    month:  02,
+    year:   2019
+  },
+  {
+    sign:   "gemini",
+    hour:   09,
+    minute: 32,
+    day:    13,
+    month:  02,
+    year:   2019
+  },
+  {
+    sign:   "cancer",
+    hour:   14,
+    minute: 03,
+    day:    15,
+    month:  02,
+    year:   2019
+  }
+]
+
+
 ];
 
 // Test
@@ -984,131 +1987,60 @@ var zodiac9 = [
 
 // var zodiacQuantity = 12;
 
-function initZodiac() {
-  console.log("INIT ZODIAC");
+function initMoons() {
 
-  // + FIRST ONES
-	for (var i = 0; i < zodiac1.length; i++) {
-    var testTime = zodiac1[i];
-    var dist = timeFromBeggining(testTime) * 100;
-    zodiac1[i].dist = dist;
-    var appendMe =
-      "<div class='zodiac' style='margin-left : " +
-      zodiac1[i].dist +
-      "px'>" +
-			icon(zodiac1[i].sign) +
-      " </div>";
-    $(".next_zodiac").append(appendMe);
-    $(".prev_zodiac").append(appendMe);
+  for (var j = 0; j < newMoonPhases.length; j++) {
+    for (var i = 0; i < newMoonPhases[j].length; i++) {
+      var testTime = newMoonPhases[j][i];
+      var dist = timeFromBeggining(testTime) * 100;
+      newMoonPhases[j][i].dist = dist;
+      console.log(testTime);
+      var appendMoon =
+        "<div class='newMoonPhases' style='margin-left : " +
+        newMoonPhases[j][i].dist +
+        "px'>" +
+        iconMoon(newMoonPhases[j][i].type) +
+        " </div>";
+      $(".next_zodiac").append(appendMoon);
+      $(".prev_zodiac").append(appendMoon);
+    }
   }
-	for (var i = 0; i < zodiac2.length; i++) {
-    var testTime = zodiac2[i];
-    var dist = timeFromBeggining(testTime) * 100;
-    zodiac2[i].dist = dist
-    var appendMe =
-      "<div class='zodiac' style='margin-left : " +
-      zodiac2[i].dist +
-      "px'>" +
-			icon(zodiac2[i].sign) +
-      " </div>";
-    $(".next_zodiac").append(appendMe);
-    $(".prev_zodiac").append(appendMe);
-  }
-	for (var i = 0; i < zodiac3.length; i++) {
-    var testTime = zodiac3[i];
-    var dist = timeFromBeggining(testTime) * 100;
-    zodiac3[i].dist =dist
-    var appendMe =
-      "<div class='zodiac' style='margin-left : " +
-      zodiac3[i].dist +
-      "px'>" +
-			icon(zodiac3[i].sign) +
-      " </div>";
-    $(".next_zodiac").append(appendMe);
-    $(".prev_zodiac").append(appendMe);
-  }
-	for (var i = 0; i < zodiac4.length; i++) {
-    var testTime = zodiac4[i];
-    var dist = timeFromBeggining(testTime) * 100;
-    zodiac4[i].dist = dist
-    var appendMe =
-      "<div class='zodiac' style='margin-left : " +
-      zodiac4[i].dist +
-      "px'>" +
-			icon(zodiac4[i].sign) +
-      " </div>";
-    $(".next_zodiac").append(appendMe);
-    $(".prev_zodiac").append(appendMe);
-  }
-	for (var i = 0; i < zodiac5.length; i++) {
-		var testTime = zodiac5[i];
-		var dist = timeFromBeggining(testTime) * 100;
-    zodiac5[i].dist = dist;
-		var appendMe =
-			"<div class='zodiac' style='margin-left : " +
-			zodiac5[i].dist +
-			"px'>" +
-			icon(zodiac5[i].sign) +
-			" </div>";
-		$(".next_zodiac").append(appendMe);
-		$(".prev_zodiac").append(appendMe);
+
+  function iconMoon(name){
+		switch(name){
+      case "fullmoon":
+				varImg = "<img name='fullMoon' class='icoZodiac' src='img/moonPhases/FM.png' style='border-top: 23px solid transparent;'>"
+				return varImg
+	    break;
+      case "newmoon":
+				varImg = "<img name='fullMoon' class='icoZodiac' src='img/moonPhases/NM.png' style='border-top: 23px solid transparent;'>"
+				return varImg
+	    break;
+	    // default:
+			// 	varImg = "<img name='default' class='icoZodiac' src='img/zodiac/smalls/default.svg'/>"
+			// 	return varImg
+		}
 	}
 
-	for (var i = 0; i < zodiac6.length; i++) {
-		var testTime = zodiac6[i];
-		var dist = timeFromBeggining(testTime) * 100;
-    zodiac6[i].dist = dist;
-		var appendMe =
-			"<div class='zodiac' style='margin-left : " +
-			zodiac6[i].dist +
-			"px'>" +
-			icon(zodiac6[i].sign) +
-			" </div>";
-		$(".next_zodiac").append(appendMe);
-		$(".prev_zodiac").append(appendMe);
-	}
+}
 
-	for (var i = 0; i < zodiac7.length; i++) {
-		var testTime = zodiac7[i];
-		var dist = timeFromBeggining(testTime) * 100;
-    zodiac7[i].dist = dist;
-		var appendMe =
-			"<div class='zodiac' style='margin-left : " +
-			zodiac7[i].dist +
-			"px'>" +
-			icon(zodiac7[i].sign) +
-			" </div>";
-		$(".next_zodiac").append(appendMe);
-		$(".prev_zodiac").append(appendMe);
-	}
+  function initZodiac() {
 
-	for (var i = 0; i < zodiac8.length; i++) {
-		var testTime = zodiac8[i];
-		var dist = timeFromBeggining(testTime) * 100;
-    zodiac8[i].dist = dist;
-		var appendMe =
-			"<div class='zodiac' style='margin-left : " +
-			zodiac8[i].dist +
-			"px'>" +
-			icon(zodiac8[i].sign) +
-			" </div>";
-		$(".next_zodiac").append(appendMe);
-		$(".prev_zodiac").append(appendMe);
-	}
-
-	for (var i = 0; i < zodiac9.length; i++) {
-		var testTime = zodiac9[i];
-		var dist = timeFromBeggining(testTime) * 100;
-    zodiac9[i].dist = dist;
-		var appendMe =
-			"<div class='zodiac' style='margin-left : " +
-			zodiac9[i].dist +
-			"px'>" +
-			icon(zodiac9[i].sign) +
-			" </div>";
-		$(".next_zodiac").append(appendMe);
-		$(".prev_zodiac").append(appendMe);
-	}
+    for (var j = 0; j < zodiacs.length; j++) {
+    	for (var i = 0; i < zodiacs[j].length; i++) {
+        var testTime = zodiacs[j][i];
+        var dist = timeFromBeggining(testTime) * 100;
+        zodiacs[j][i].dist = dist;
+        var appendMe =
+          "<div class='zodiac' style='margin-left : " +
+          zodiacs[j][i].dist +
+          "px'>" +
+    			icon(zodiacs[j][i].sign) +
+          " </div>";
+        $(".next_zodiac").append(appendMe);
+        $(".prev_zodiac").append(appendMe);
+      }
+    }
 
 	function icon(name){
 		switch(name){
@@ -1166,20 +2098,10 @@ function initZodiac() {
 				return varImg
 		}
 	}
-		// TEST
-    // var testTime = test
-    // var dist = timeFromBeggining(testTime) * 100;
-    // var appendMe =
-    //   "<div class='zodiac' style='margin-left : " +
-    //   dist +
-    //   "px'>" +
-    //   icon(test.sign) +
-    //   " </div>";
-    // $(".next_zodiac").append(appendMe);
-    // $(".prev_zodiac").append(appendMe);
 
 }
 
+window.onload = initMoons();
 window.onload = initZodiac();
 
 // test time from beggining
